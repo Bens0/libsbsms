@@ -4,8 +4,8 @@ SBSMSLogo ICON "sbsms.ico"
 // Version
 //
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,7,0,0
- PRODUCTVERSION 1,7,0,0
+ FILEVERSION 2,4,0,0
+ PRODUCTVERSION 2,4,0,0
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -22,12 +22,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Mune"
             VALUE "FileDescription", "SBSMS wxPlayer"
-            VALUE "FileVersion", "1.7.0"
+            VALUE "FileVersion", "2.4.0"
             VALUE "InternalName", "SBSMS"
             VALUE "LegalCopyright", "Copyright © 2008. All rights reserved."
             VALUE "OriginalFilename", "sbsms.exe"
             VALUE "ProductName", "SBSMS wxPlayer"
-            VALUE "ProductVersion", "1.7.0"
+            VALUE "ProductVersion", "2.4.0"
         END
     END
     BLOCK "VarFileInfo"

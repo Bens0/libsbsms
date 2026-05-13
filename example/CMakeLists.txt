@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.1)
-project(sbsmsx VERSION 2.3.0 LANGUAGES C CXX)
+cmake_minimum_required(VERSION 3.14)
+project(sbsmsx VERSION 2.4.0 LANGUAGES C CXX)
 
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)

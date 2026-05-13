@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.1)
-project(sbsms VERSION 2.3.0 LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.14) # Bumped to 3.14 due to wide compatibility, lowest version where boost works well
+project(sbsms VERSION 2.4.0 LANGUAGES CXX)
 
 option(BUILD_SHARED_LIBS "Build dynamic library" ON)
 
@@ -16,6 +16,8 @@ add_library(sbsms
   src/track.cpp
   src/trackpoint.cpp
 )
+
+add_compile_options(-Wall -Wextra -Wshadow -Wconversion)
 
 target_compile_definitions(sbsms PRIVATE CMAKE)
 

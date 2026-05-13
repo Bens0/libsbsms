@@ -12,9 +12,9 @@ using namespace std;
 
 namespace _sbsms_ {
 
-SBSMSQuality :: SBSMSQuality(const SBSMSQualityParams *params)
+SBSMSQuality :: SBSMSQuality(const SBSMSQualityParams *p)
 {
-  this->params = *params;
+  this->params = *p;
 }
 
 long SBSMSQuality :: getFrameSize()

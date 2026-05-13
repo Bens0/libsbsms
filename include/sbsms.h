@@ -29,7 +29,7 @@ struct SBSMSQualityParams {
 
 class SBSMSQuality {
  public:
-  SBSMSQuality(const SBSMSQualityParams *params);
+  SBSMSQuality(const SBSMSQualityParams *p);
   SBSMSQualityParams params;
   long getFrameSize();
   long getMaxPresamples();
@@ -56,7 +56,7 @@ typedef long (*SBSMSResampleCB)(void *cbData, SBSMSFrame *frame);
 class SBSMSInterface /* not final */ {
  public:
   virtual ~SBSMSInterface() {}
-  virtual long samples(audio *buf, long n) { return 0; }
+  virtual long samples(audio*  /*buf*/, long /*n*/) { return 0; }
   virtual float getStretch(float t)=0;
   virtual float getMeanStretch(float t0, float t1)=0;
   virtual float getPitch(float t)=0;
@@ -86,11 +86,11 @@ class SBSMSRenderer {
  public:
   virtual ~SBSMSRenderer() {}
   virtual void startFrame() {}
-  virtual void startTime(int c, const TimeType &time, int n) {}
-  virtual void render(int c, SBSMSTrack *t) {}
-  virtual void endTime(int c) {}
+  virtual void startTime(int /*c*/, const TimeType& /*time*/, int /*n*/) {}
+  virtual void render(int /*c*/, SBSMSTrack* /*t*/) {}
+  virtual void endTime(int /*c*/) {}
   virtual void endFrame() {}
-  virtual void end(const SampleCountType &samples) {}
+  virtual void end(const SampleCountType& /*samples*/) {}
 };
 
 enum SBSMSError {

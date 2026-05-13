@@ -1,0 +1,1517 @@
+[ 33%] Building CXX object CMakeFiles/sbsms.dir/src/fft.cpp.o
+[ 33%] Building CXX object CMakeFiles/sbsms.dir/src/grain.cpp.o
+[ 33%] Building CXX object CMakeFiles/sbsms.dir/src/slide.cpp.o
+[ 33%] Building CXX object CMakeFiles/sbsms.dir/src/sbsms.cpp.o
+[ 41%] Building CXX object CMakeFiles/sbsms.dir/src/sms.cpp.o
+[ 58%] Building CXX object CMakeFiles/sbsms.dir/src/dBTable.cpp.o
+[ 58%] Building CXX object CMakeFiles/sbsms.dir/src/buffer.cpp.o
+[ 66%] Building CXX object CMakeFiles/sbsms.dir/src/resample.cpp.o
+[ 75%] Building CXX object CMakeFiles/sbsms.dir/src/subband.cpp.o
+[ 83%] Building CXX object CMakeFiles/sbsms.dir/src/track.cpp.o
+[ 91%] Building CXX object CMakeFiles/sbsms.dir/src/trackpoint.cpp.o
+In file included from /home/ember/work/libsbsms/src/fft.h:7,
+                 from /home/ember/work/libsbsms/src/fft.cpp:1:
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canonPI(float)’:
+/home/ember/work/libsbsms/src/utils.h:40:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   40 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canon2PI(float)’:
+/home/ember/work/libsbsms/src/utils.h:48:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   48 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+In file included from /home/ember/work/libsbsms/src/fft.h:7,
+                 from /home/ember/work/libsbsms/src/grain.h:5,
+                 from /home/ember/work/libsbsms/src/buffer.h:6,
+                 from /home/ember/work/libsbsms/src/buffer.cpp:4:
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canonPI(float)’:
+/home/ember/work/libsbsms/src/utils.h:40:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   40 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canon2PI(float)’:
+/home/ember/work/libsbsms/src/utils.h:48:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   48 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/fft.h: In static member function ‘static int _sbsms_::fft_order_<1>::iterate(int)’:
+/home/ember/work/libsbsms/src/fft.h:810:33: warning: unused parameter ‘k0’ [-Wunused-parameter]
+  810 |   static inline int iterate(int k0) {
+      |                             ~~~~^~
+/home/ember/work/libsbsms/src/fft.h: In static member function ‘static int _sbsms_::fft_order_<1>::iterate(int)’:
+/home/ember/work/libsbsms/src/fft.h:810:33: warning: unused parameter ‘k0’ [-Wunused-parameter]
+  810 |   static inline int iterate(int k0) {
+      |                             ~~~~^~
+/home/ember/work/libsbsms/src/fft.h: In instantiation of ‘static void _sbsms_::__fft<istride, ostride, 2, dir>::execute(float (*)[2], float (*)[2], int) [with int istride = 1; int ostride = 64; int dir = 1; _sbsms_::t_fft = float [2]]’:
+/home/ember/work/libsbsms/src/fft.h:839:42:   required from ‘static void _sbsms_::fft_reorder<N, dir>::reorder(float (*)[2]) [with int N = 128; int dir = 1; _sbsms_::t_fft = float [2]]’
+  839 |       __fft<1,ostride,radix,dir>::execute(y+r,x+o[r],0);
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/fft.h:852:30:   required from ‘void _sbsms_::fft(float (*)[2]) [with int N = 128; int dir = 1; t_fft = float [2]]’
+  852 |   fft_reorder<N,dir>::reorder(x);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.cpp:7:13:   required from here
+    7 |   fft<128,1>(x);
+      |   ~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.h:91:56: warning: unused parameter ‘step’ [-Wunused-parameter]
+   91 |   static inline void execute(t_fft *_x, t_fft *_y, int step) {
+      |                                                    ~~~~^~~~
+/home/ember/work/libsbsms/src/fft.h: In instantiation of ‘static void _sbsms_::__fft<istride, ostride, 2, dir>::execute(float (*)[2], float (*)[2], int) [with int istride = 1; int ostride = 64; int dir = -1; _sbsms_::t_fft = float [2]]’:
+/home/ember/work/libsbsms/src/fft.h:839:42:   required from ‘static void _sbsms_::fft_reorder<N, dir>::reorder(float (*)[2]) [with int N = 128; int dir = -1; _sbsms_::t_fft = float [2]]’
+  839 |       __fft<1,ostride,radix,dir>::execute(y+r,x+o[r],0);
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/fft.h:852:30:   required from ‘void _sbsms_::fft(float (*)[2]) [with int N = 128; int dir = -1; t_fft = float [2]]’
+  852 |   fft_reorder<N,dir>::reorder(x);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.cpp:12:14:   required from here
+   12 |   fft<128,-1>(x);
+      |   ~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.h:91:56: warning: unused parameter ‘step’ [-Wunused-parameter]
+   91 |   static inline void execute(t_fft *_x, t_fft *_y, int step) {
+      |                                                    ~~~~^~~~
+/home/ember/work/libsbsms/src/buffer.h: In constructor ‘_sbsms_::ArrayRingBuffer<T>::ArrayRingBuffer(int)’:
+/home/ember/work/libsbsms/src/buffer.h:145:43: warning: declaration of ‘N’ shadows a member of ‘_sbsms_::ArrayRingBuffer<T>’ [-Wshadow]
+  145 | ArrayRingBuffer<T> :: ArrayRingBuffer(int N)
+      |                                       ~~~~^
+/home/ember/work/libsbsms/src/buffer.h:138:7: note: shadowed declaration is here
+  138 |   int N;
+      |       ^
+In file included from /home/ember/work/libsbsms/src/trackpoint.cpp:2:
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canonPI(float)’:
+/home/ember/work/libsbsms/src/utils.h:40:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   40 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canon2PI(float)’:
+/home/ember/work/libsbsms/src/utils.h:48:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   48 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/fft.h: In instantiation of ‘static void _sbsms_::_fft<k, 1, radix, dir>::loop(float (*)[2]) [with int k = 16; int radix = 2; int dir = 1; _sbsms_::t_fft = float [2]]’:
+/home/ember/work/libsbsms/src/fft.h:760:37:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::execute(float (*)[2]) [with int k = 112; int stride = 2; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  760 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:763:40:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 128; int stride = 2; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  763 |     _fft<k-N,stride,radix,dir>::execute(x-N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:778:37:   required from ‘static void _sbsms_::_fft<0, stride, radix, dir>::execute(float (*)[2]) [with int stride = 16; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  778 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:851:36:   required from ‘void _sbsms_::fft(float (*)[2]) [with int N = 128; int dir = 1; t_fft = float [2]]’
+  851 |   _fft<0,stride,radix,dir>::execute(x);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.cpp:7:13:   required from here
+    7 |   fft<128,1>(x);
+      |   ~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.h:787:34: warning: unused parameter ‘x’ [-Wunused-parameter]
+  787 |   static inline void loop(t_fft *x) { }
+      |                           ~~~~~~~^
+In file included from /home/ember/work/libsbsms/src/resample.cpp:8:
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canonPI(float)’:
+/home/ember/work/libsbsms/src/utils.h:40:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   40 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canon2PI(float)’:
+/home/ember/work/libsbsms/src/utils.h:48:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   48 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/fft.h: In instantiation of ‘static void _sbsms_::_fft<k, 1, radix, dir>::loop(float (*)[2]) [with int k = 16; int radix = 2; int dir = -1; _sbsms_::t_fft = float [2]]’:
+/home/ember/work/libsbsms/src/fft.h:760:37:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::execute(float (*)[2]) [with int k = 112; int stride = 2; int radix = 8; int dir = -1; _sbsms_::t_fft = float [2]]’
+  760 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:763:40:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 128; int stride = 2; int radix = 8; int dir = -1; _sbsms_::t_fft = float [2]]’
+  763 |     _fft<k-N,stride,radix,dir>::execute(x-N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:778:37:   required from ‘static void _sbsms_::_fft<0, stride, radix, dir>::execute(float (*)[2]) [with int stride = 16; int radix = 8; int dir = -1; _sbsms_::t_fft = float [2]]’
+  778 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:851:36:   required from ‘void _sbsms_::fft(float (*)[2]) [with int N = 128; int dir = -1; t_fft = float [2]]’
+  851 |   _fft<0,stride,radix,dir>::execute(x);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.cpp:12:14:   required from here
+   12 |   fft<128,-1>(x);
+      |   ~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.h:787:34: warning: unused parameter ‘x’ [-Wunused-parameter]
+  787 |   static inline void loop(t_fft *x) { }
+      |                           ~~~~~~~^
+/home/ember/work/libsbsms/src/fft.h: In instantiation of ‘static void _sbsms_::_fft<k, 1, radix, dir>::loop(float (*)[2]) [with int k = 32; int radix = 4; int dir = 1; _sbsms_::t_fft = float [2]]’:
+/home/ember/work/libsbsms/src/fft.h:760:37:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::execute(float (*)[2]) [with int k = 224; int stride = 4; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  760 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:763:40:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 256; int stride = 4; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  763 |     _fft<k-N,stride,radix,dir>::execute(x-N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:778:37:   required from ‘static void _sbsms_::_fft<0, stride, radix, dir>::execute(float (*)[2]) [with int stride = 32; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  778 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:851:36:   required from ‘void _sbsms_::fft(float (*)[2]) [with int N = 256; int dir = 1; t_fft = float [2]]’
+  851 |   _fft<0,stride,radix,dir>::execute(x);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.cpp:17:13:   required from here
+   17 |   fft<256,1>(x);
+      |   ~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.h:787:34: warning: unused parameter ‘x’ [-Wunused-parameter]
+  787 |   static inline void loop(t_fft *x) { }
+      |                           ~~~~~~~^
+/home/ember/work/libsbsms/src/fft.h: In instantiation of ‘static void _sbsms_::_fft<k, 1, radix, dir>::loop(float (*)[2]) [with int k = 32; int radix = 4; int dir = -1; _sbsms_::t_fft = float [2]]’:
+/home/ember/work/libsbsms/src/fft.h:760:37:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::execute(float (*)[2]) [with int k = 224; int stride = 4; int radix = 8; int dir = -1; _sbsms_::t_fft = float [2]]’
+  760 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:763:40:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 256; int stride = 4; int radix = 8; int dir = -1; _sbsms_::t_fft = float [2]]’
+  763 |     _fft<k-N,stride,radix,dir>::execute(x-N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:778:37:   required from ‘static void _sbsms_::_fft<0, stride, radix, dir>::execute(float (*)[2]) [with int stride = 32; int radix = 8; int dir = -1; _sbsms_::t_fft = float [2]]’
+  778 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:851:36:   required from ‘void _sbsms_::fft(float (*)[2]) [with int N = 256; int dir = -1; t_fft = float [2]]’
+  851 |   _fft<0,stride,radix,dir>::execute(x);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.cpp:22:14:   required from here
+   22 |   fft<256,-1>(x);
+      |   ~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.h:787:34: warning: unused parameter ‘x’ [-Wunused-parameter]
+  787 |   static inline void loop(t_fft *x) { }
+      |                           ~~~~~~~^
+In file included from /home/ember/work/libsbsms/src/grain.h:5,
+                 from /home/ember/work/libsbsms/src/buffer.h:6,
+                 from /home/ember/work/libsbsms/src/resample.cpp:9:
+/home/ember/work/libsbsms/src/fft.h: In static member function ‘static int _sbsms_::fft_order_<1>::iterate(int)’:
+/home/ember/work/libsbsms/src/fft.h:810:33: warning: unused parameter ‘k0’ [-Wunused-parameter]
+  810 |   static inline int iterate(int k0) {
+      |                             ~~~~^~
+/home/ember/work/libsbsms/src/fft.h: In instantiation of ‘static void _sbsms_::_fft<k, 1, radix, dir>::loop(float (*)[2]) [with int k = 48; int radix = 6; int dir = 1; _sbsms_::t_fft = float [2]]’:
+/home/ember/work/libsbsms/src/fft.h:760:37:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::execute(float (*)[2]) [with int k = 336; int stride = 6; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  760 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:763:40:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 384; int stride = 6; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  763 |     _fft<k-N,stride,radix,dir>::execute(x-N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:778:37:   required from ‘static void _sbsms_::_fft<0, stride, radix, dir>::execute(float (*)[2]) [with int stride = 48; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  778 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:851:36:   required from ‘void _sbsms_::fft(float (*)[2]) [with int N = 384; int dir = 1; t_fft = float [2]]’
+  851 |   _fft<0,stride,radix,dir>::execute(x);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.cpp:27:13:   required from here
+   27 |   fft<384,1>(x);
+      |   ~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.h:787:34: warning: unused parameter ‘x’ [-Wunused-parameter]
+  787 |   static inline void loop(t_fft *x) { }
+      |                           ~~~~~~~^
+/home/ember/work/libsbsms/src/fft.h: In instantiation of ‘static void _sbsms_::_fft<k, 1, radix, dir>::loop(float (*)[2]) [with int k = 64; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’:
+/home/ember/work/libsbsms/src/fft.h:760:37:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::execute(float (*)[2]) [with int k = 448; int stride = 8; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  760 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:763:40:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 512; int stride = 8; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  763 |     _fft<k-N,stride,radix,dir>::execute(x-N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:778:37:   required from ‘static void _sbsms_::_fft<0, stride, radix, dir>::execute(float (*)[2]) [with int stride = 64; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  778 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:851:36:   required from ‘void _sbsms_::fft(float (*)[2]) [with int N = 512; int dir = 1; t_fft = float [2]]’
+  851 |   _fft<0,stride,radix,dir>::execute(x);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.cpp:32:13:   required from here
+   32 |   fft<512,1>(x);
+      |   ~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.h:787:34: warning: unused parameter ‘x’ [-Wunused-parameter]
+  787 |   static inline void loop(t_fft *x) { }
+      |                           ~~~~~~~^
+In file included from /home/ember/work/libsbsms/src/fft.h:7,
+                 from /home/ember/work/libsbsms/src/grain.h:5,
+                 from /home/ember/work/libsbsms/src/grain.cpp:4:
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canonPI(float)’:
+/home/ember/work/libsbsms/src/utils.h:40:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   40 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canon2PI(float)’:
+/home/ember/work/libsbsms/src/utils.h:48:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   48 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/fft.h: In instantiation of ‘static void _sbsms_::_fft<0, stride, radix, dir>::loop(float (*)[2]) [with int stride = 2; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’:
+/home/ember/work/libsbsms/src/fft.h:764:37:   recursively required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 112; int stride = 2; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  764 |     _fft<k-N,stride,radix,dir>::loop(x-N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:764:37:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 128; int stride = 2; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+/home/ember/work/libsbsms/src/fft.h:778:37:   required from ‘static void _sbsms_::_fft<0, stride, radix, dir>::execute(float (*)[2]) [with int stride = 16; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  778 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:851:36:   required from ‘void _sbsms_::fft(float (*)[2]) [with int N = 128; int dir = 1; t_fft = float [2]]’
+  851 |   _fft<0,stride,radix,dir>::execute(x);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.cpp:7:13:   required from here
+    7 |   fft<128,1>(x);
+      |   ~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.h:780:34: warning: unused parameter ‘x’ [-Wunused-parameter]
+  780 |   static inline void loop(t_fft *x) { }
+      |                           ~~~~~~~^
+/home/ember/work/libsbsms/src/fft.h: In instantiation of ‘static void _sbsms_::_fft<0, stride, radix, dir>::loop(float (*)[2]) [with int stride = 2; int radix = 8; int dir = -1; _sbsms_::t_fft = float [2]]’:
+/home/ember/work/libsbsms/src/fft.h:764:37:   recursively required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 112; int stride = 2; int radix = 8; int dir = -1; _sbsms_::t_fft = float [2]]’
+  764 |     _fft<k-N,stride,radix,dir>::loop(x-N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:764:37:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 128; int stride = 2; int radix = 8; int dir = -1; _sbsms_::t_fft = float [2]]’
+/home/ember/work/libsbsms/src/fft.h:778:37:   required from ‘static void _sbsms_::_fft<0, stride, radix, dir>::execute(float (*)[2]) [with int stride = 16; int radix = 8; int dir = -1; _sbsms_::t_fft = float [2]]’
+  778 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:851:36:   required from ‘void _sbsms_::fft(float (*)[2]) [with int N = 128; int dir = -1; t_fft = float [2]]’
+  851 |   _fft<0,stride,radix,dir>::execute(x);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.cpp:12:14:   required from here
+   12 |   fft<128,-1>(x);
+      |   ~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.h:780:34: warning: unused parameter ‘x’ [-Wunused-parameter]
+  780 |   static inline void loop(t_fft *x) { }
+      |                           ~~~~~~~^
+/home/ember/work/libsbsms/src/fft.h: In instantiation of ‘static void _sbsms_::_fft<0, stride, radix, dir>::loop(float (*)[2]) [with int stride = 4; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’:
+/home/ember/work/libsbsms/src/fft.h:764:37:   recursively required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 224; int stride = 4; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  764 |     _fft<k-N,stride,radix,dir>::loop(x-N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:764:37:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 256; int stride = 4; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+/home/ember/work/libsbsms/src/fft.h:778:37:   required from ‘static void _sbsms_::_fft<0, stride, radix, dir>::execute(float (*)[2]) [with int stride = 32; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  778 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:851:36:   required from ‘void _sbsms_::fft(float (*)[2]) [with int N = 256; int dir = 1; t_fft = float [2]]’
+  851 |   _fft<0,stride,radix,dir>::execute(x);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.cpp:17:13:   required from here
+   17 |   fft<256,1>(x);
+      |   ~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.h:780:34: warning: unused parameter ‘x’ [-Wunused-parameter]
+  780 |   static inline void loop(t_fft *x) { }
+      |                           ~~~~~~~^
+/home/ember/work/libsbsms/src/fft.h: In instantiation of ‘static void _sbsms_::_fft<0, stride, radix, dir>::loop(float (*)[2]) [with int stride = 4; int radix = 8; int dir = -1; _sbsms_::t_fft = float [2]]’:
+/home/ember/work/libsbsms/src/fft.h:764:37:   recursively required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 224; int stride = 4; int radix = 8; int dir = -1; _sbsms_::t_fft = float [2]]’
+  764 |     _fft<k-N,stride,radix,dir>::loop(x-N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:764:37:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 256; int stride = 4; int radix = 8; int dir = -1; _sbsms_::t_fft = float [2]]’
+/home/ember/work/libsbsms/src/fft.h:778:37:   required from ‘static void _sbsms_::_fft<0, stride, radix, dir>::execute(float (*)[2]) [with int stride = 32; int radix = 8; int dir = -1; _sbsms_::t_fft = float [2]]’
+  778 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:851:36:   required from ‘void _sbsms_::fft(float (*)[2]) [with int N = 256; int dir = -1; t_fft = float [2]]’
+  851 |   _fft<0,stride,radix,dir>::execute(x);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.cpp:22:14:   required from here
+   22 |   fft<256,-1>(x);
+      |   ~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.h:780:34: warning: unused parameter ‘x’ [-Wunused-parameter]
+  780 |   static inline void loop(t_fft *x) { }
+      |                           ~~~~~~~^
+/home/ember/work/libsbsms/src/fft.h: In instantiation of ‘static void _sbsms_::_fft<0, stride, radix, dir>::loop(float (*)[2]) [with int stride = 6; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’:
+/home/ember/work/libsbsms/src/fft.h:764:37:   recursively required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 336; int stride = 6; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  764 |     _fft<k-N,stride,radix,dir>::loop(x-N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:764:37:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 384; int stride = 6; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+/home/ember/work/libsbsms/src/fft.h:778:37:   required from ‘static void _sbsms_::_fft<0, stride, radix, dir>::execute(float (*)[2]) [with int stride = 48; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  778 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:851:36:   required from ‘void _sbsms_::fft(float (*)[2]) [with int N = 384; int dir = 1; t_fft = float [2]]’
+  851 |   _fft<0,stride,radix,dir>::execute(x);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.cpp:27:13:   required from here
+   27 |   fft<384,1>(x);
+      |   ~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.h:780:34: warning: unused parameter ‘x’ [-Wunused-parameter]
+  780 |   static inline void loop(t_fft *x) { }
+      |                           ~~~~~~~^
+/home/ember/work/libsbsms/src/fft.h: In instantiation of ‘static void _sbsms_::_fft<0, stride, radix, dir>::loop(float (*)[2]) [with int stride = 8; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’:
+/home/ember/work/libsbsms/src/fft.h:764:37:   recursively required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 448; int stride = 8; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  764 |     _fft<k-N,stride,radix,dir>::loop(x-N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:764:37:   required from ‘static void _sbsms_::_fft<k, stride, radix, dir>::loop(float (*)[2]) [with int k = 512; int stride = 8; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+/home/ember/work/libsbsms/src/fft.h:778:37:   required from ‘static void _sbsms_::_fft<0, stride, radix, dir>::execute(float (*)[2]) [with int stride = 64; int radix = 8; int dir = 1; _sbsms_::t_fft = float [2]]’
+  778 |     _fft<N,_stride,_radix,dir>::loop(x+N);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/fft.h:851:36:   required from ‘void _sbsms_::fft(float (*)[2]) [with int N = 512; int dir = 1; t_fft = float [2]]’
+  851 |   _fft<0,stride,radix,dir>::execute(x);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.cpp:32:13:   required from here
+   32 |   fft<512,1>(x);
+      |   ~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/fft.h:780:34: warning: unused parameter ‘x’ [-Wunused-parameter]
+  780 |   static inline void loop(t_fft *x) { }
+      |                           ~~~~~~~^
+/home/ember/work/libsbsms/src/fft.h: In static member function ‘static int _sbsms_::fft_order_<1>::iterate(int)’:
+/home/ember/work/libsbsms/src/fft.h:810:33: warning: unused parameter ‘k0’ [-Wunused-parameter]
+  810 |   static inline int iterate(int k0) {
+      |                             ~~~~^~
+In file included from /home/ember/work/libsbsms/src/fft.h:7,
+                 from /home/ember/work/libsbsms/src/grain.h:5,
+                 from /home/ember/work/libsbsms/src/sms.h:10,
+                 from /home/ember/work/libsbsms/src/sms.cpp:4:
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canonPI(float)’:
+/home/ember/work/libsbsms/src/utils.h:40:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   40 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canon2PI(float)’:
+/home/ember/work/libsbsms/src/utils.h:48:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   48 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/buffer.cpp: In member function ‘void _sbsms_::ArrayRingBuffer<T>::write(_sbsms_::grain*, int) [with T = float [2]]’:
+/home/ember/work/libsbsms/src/buffer.cpp:20:25: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+   20 |     int kend = writePos + N;
+      |                ~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/buffer.cpp:21:15: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+   21 |     for(int k=writePos; k<kend; k++) {
+      |               ^~~~~~~~
+/home/ember/work/libsbsms/src/buffer.h: In constructor ‘_sbsms_::ArrayRingBuffer<T>::ArrayRingBuffer(int)’:
+/home/ember/work/libsbsms/src/buffer.h:145:43: warning: declaration of ‘N’ shadows a member of ‘_sbsms_::ArrayRingBuffer<T>’ [-Wshadow]
+  145 | ArrayRingBuffer<T> :: ArrayRingBuffer(int N)
+      |                                       ~~~~^
+/home/ember/work/libsbsms/src/buffer.h:138:7: note: shadowed declaration is here
+  138 |   int N;
+      |       ^
+/home/ember/work/libsbsms/src/buffer.cpp: In constructor ‘_sbsms_::GrainBuf::GrainBuf(int, int, int, int)’:
+/home/ember/work/libsbsms/src/buffer.cpp:28:40: warning: declaration of ‘N2’ shadows a member of ‘_sbsms_::GrainBuf’ [-Wshadow]
+   28 | GrainBuf :: GrainBuf(int N, int h, int N2, int type) :
+      |                                    ~~~~^~
+/home/ember/work/libsbsms/src/buffer.h:246:8: note: shadowed declaration is here
+  246 |   long N2;
+      |        ^~
+/home/ember/work/libsbsms/src/buffer.cpp:28:33: warning: declaration of ‘h’ shadows a member of ‘_sbsms_::GrainBuf’ [-Wshadow]
+   28 | GrainBuf :: GrainBuf(int N, int h, int N2, int type) :
+      |                             ~~~~^
+/home/ember/work/libsbsms/src/buffer.h:247:8: note: shadowed declaration is here
+  247 |   long h;
+      |        ^
+/home/ember/work/libsbsms/src/buffer.cpp: In destructor ‘_sbsms_::GrainBuf::~GrainBuf()’:
+/home/ember/work/libsbsms/src/buffer.cpp:45:13: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+   45 |   for(int k=readPos;k<writePos;k++) {
+      |             ^~~~~~~
+/home/ember/work/libsbsms/src/resample.cpp: In constructor ‘_sbsms_::ResamplerImp::ResamplerImp(_sbsms_::SBSMSResampleCB, void*, _sbsms_::SlideType)’:
+/home/ember/work/libsbsms/src/resample.cpp:47:72: warning: declaration of ‘slideType’ shadows a member of ‘_sbsms_::ResamplerImp’ [-Wshadow]
+   47 | ResamplerImp :: ResamplerImp(SBSMSResampleCB cb, void *data, SlideType slideType)
+      |                                                              ~~~~~~~~~~^~~~~~~~~
+/home/ember/work/libsbsms/src/resample.cpp:37:13: note: shadowed declaration is here
+   37 |   SlideType slideType;
+      |             ^~~~~~~~~
+/home/ember/work/libsbsms/src/resample.cpp:47:56: warning: declaration of ‘data’ shadows a member of ‘_sbsms_::ResamplerImp’ [-Wshadow]
+   47 | ResamplerImp :: ResamplerImp(SBSMSResampleCB cb, void *data, SlideType slideType)
+      |                                                  ~~~~~~^~~~
+/home/ember/work/libsbsms/src/resample.cpp:35:9: note: shadowed declaration is here
+   35 |   void *data;
+      |         ^~~~
+/home/ember/work/libsbsms/src/resample.cpp:47:46: warning: declaration of ‘cb’ shadows a member of ‘_sbsms_::ResamplerImp’ [-Wshadow]
+   47 | ResamplerImp :: ResamplerImp(SBSMSResampleCB cb, void *data, SlideType slideType)
+      |                              ~~~~~~~~~~~~~~~~^~
+/home/ember/work/libsbsms/src/resample.cpp:34:19: note: shadowed declaration is here
+   34 |   SBSMSResampleCB cb;
+      |                   ^~
+/home/ember/work/libsbsms/src/buffer.cpp: In member function ‘void _sbsms_::GrainBuf::advance(long int)’:
+/home/ember/work/libsbsms/src/buffer.cpp:96:13: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+   96 |   for(int k=readPos;k<readPos+n;k++) {
+      |             ^~~~~~~
+/home/ember/work/libsbsms/src/resample.cpp: In function ‘void _sbsms_::updateSlide(Slide*, float*, float*, int*, float*)’:
+/home/ember/work/libsbsms/src/resample.cpp:94:22: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+   94 |     *maxDist = lrintf(resampleSincSamples);
+      |                ~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/resample.cpp:98:22: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+   98 |     *maxDist = lrintf(static_cast<float>(resampleSincSamples) * stretch);
+      |                ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/buffer.cpp: In constructor ‘_sbsms_::Mixer::Mixer(_sbsms_::SampleBufBase*, _sbsms_::SampleBuf*)’:
+/home/ember/work/libsbsms/src/buffer.cpp:149:46: warning: declaration of ‘b2’ shadows a member of ‘_sbsms_::Mixer’ [-Wshadow]
+  149 | Mixer :: Mixer(SampleBufBase *b1, SampleBuf *b2)
+      |                                   ~~~~~~~~~~~^~
+/home/ember/work/libsbsms/src/buffer.h:261:14: note: shadowed declaration is here
+  261 |   SampleBuf *b2;
+      |              ^~
+/home/ember/work/libsbsms/src/buffer.cpp:149:31: warning: declaration of ‘b1’ shadows a member of ‘_sbsms_::Mixer’ [-Wshadow]
+  149 | Mixer :: Mixer(SampleBufBase *b1, SampleBuf *b2)
+      |                ~~~~~~~~~~~~~~~^~
+/home/ember/work/libsbsms/src/buffer.h:260:18: note: shadowed declaration is here
+  260 |   SampleBufBase *b1;
+      |                  ^~
+/home/ember/work/libsbsms/src/resample.cpp: In member function ‘long int _sbsms_::ResamplerImp::read(float (*)[2], long int)’:
+/home/ember/work/libsbsms/src/resample.cpp:139:24: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  139 |         int fi = lrintf(f);
+      |                  ~~~~~~^~~
+/home/ember/work/libsbsms/src/resample.cpp:140:24: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+  140 |         float ff = f - fi;
+      |                        ^~
+/home/ember/work/libsbsms/src/fft.h: In static member function ‘static int _sbsms_::fft_order_<1>::iterate(int)’:
+/home/ember/work/libsbsms/src/fft.h:810:33: warning: unused parameter ‘k0’ [-Wunused-parameter]
+  810 |   static inline int iterate(int k0) {
+      |                             ~~~~^~
+/home/ember/work/libsbsms/src/resample.cpp:154:27: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  154 |           int nAhead = mid+frame.size;
+      |                        ~~~^~~~~~~~~~~
+/home/ember/work/libsbsms/src/resample.cpp:163:22: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+  163 |           midAbsf += nWrite;
+      |                      ^~~~~~
+/home/ember/work/libsbsms/src/resample.cpp:164:32: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  164 |           int nWritten = lrintf(midAbsf);
+      |                          ~~~~~~^~~~~~~~~
+/home/ember/work/libsbsms/src/resample.cpp:165:22: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+  165 |           midAbsf -= nWritten;
+      |                      ^~~~~~~~
+/home/ember/work/libsbsms/src/resample.cpp:171:30: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  171 |             int nAhead = end + 1;
+      |                          ~~~~^~~
+/home/ember/work/libsbsms/src/resample.cpp:175:29: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+  175 |             float d = (start-mid-midAbsf)*f;
+      |                        ~~~~~^~~~
+/home/ember/work/libsbsms/src/resample.cpp:176:28: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  176 |             int di = lrintf(d);
+      |                      ~~~~~~^~~
+/home/ember/work/libsbsms/src/resample.cpp:177:26: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+  177 |             float df = d-di;
+      |                          ^~
+/home/ember/work/libsbsms/src/resample.cpp:184:23: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  184 |             for(int k=start;k<=end;k++) {
+      |                       ^~~~~
+/home/ember/work/libsbsms/src/resample.cpp:211:24: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  211 |             fi = lrintf(f);
+      |                  ~~~~~~^~~
+/home/ember/work/libsbsms/src/resample.cpp:212:22: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+  212 |             ff = f - fi;
+      |                      ^~
+/home/ember/work/libsbsms/src/resample.cpp:218:34: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  218 |             int nWritten = lrintf(midAbsf);
+      |                            ~~~~~~^~~~~~~~~
+/home/ember/work/libsbsms/src/resample.cpp:219:24: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+  219 |             midAbsf -= nWritten;
+      |                        ^~~~~~~~
+/home/ember/work/libsbsms/src/resample.cpp: In member function ‘long int _sbsms_::ResamplerImp::samplesInOutput()’:
+/home/ember/work/libsbsms/src/resample.cpp:240:79: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+  240 |   long samplesFromBuffer = lrintf(0.5f*(frame.ratio0+frame.ratio1)*(frame.size-inOffset));
+      |                                                                    ~~~~~~~~~~~^~~~~~~~~~
+In file included from /home/ember/work/libsbsms/src/sms.h:11:
+/home/ember/work/libsbsms/src/buffer.h: In constructor ‘_sbsms_::ArrayRingBuffer<T>::ArrayRingBuffer(int)’:
+/home/ember/work/libsbsms/src/buffer.h:145:43: warning: declaration of ‘N’ shadows a member of ‘_sbsms_::ArrayRingBuffer<T>’ [-Wshadow]
+  145 | ArrayRingBuffer<T> :: ArrayRingBuffer(int N)
+      |                                       ~~~~^
+/home/ember/work/libsbsms/src/buffer.h:138:7: note: shadowed declaration is here
+  138 |   int N;
+      |       ^
+/home/ember/work/libsbsms/src/trackpoint.cpp: In constructor ‘_sbsms_::TrackPoint::TrackPoint(_sbsms_::Slice*, float*, float (*)[2], float*, float*, int, int, int)’:
+/home/ember/work/libsbsms/src/trackpoint.cpp:16:47: warning: declaration of ‘peak’ shadows a member of ‘_sbsms_::TrackPoint’ [-Wshadow]
+   16 | TrackPoint :: TrackPoint(Slice *slice, float *peak, audio *gx, float *mag, float *mag2, int k, int N, int band)
+      |                                        ~~~~~~~^~~~
+In file included from /home/ember/work/libsbsms/src/trackpoint.cpp:3:
+/home/ember/work/libsbsms/src/trackpoint.h:32:10: note: shadowed declaration is here
+   32 |   float *peak;
+      |          ^~~~
+/home/ember/work/libsbsms/src/trackpoint.cpp:16:33: warning: declaration of ‘slice’ shadows a member of ‘_sbsms_::TrackPoint’ [-Wshadow]
+   16 | TrackPoint :: TrackPoint(Slice *slice, float *peak, audio *gx, float *mag, float *mag2, int k, int N, int band)
+      |                          ~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/trackpoint.h:31:10: note: shadowed declaration is here
+   31 |   Slice *slice;
+      |          ^~~~~
+/home/ember/work/libsbsms/src/trackpoint.cpp:42:18: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+   42 |   x = (d==0.0f?k:k + 0.5f * (y0 - y2) / d);
+      |                  ^
+/home/ember/work/libsbsms/src/trackpoint.cpp:42:16: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+   42 |   x = (d==0.0f?k:k + 0.5f * (y0 - y2) / d);
+      |                ^
+/home/ember/work/libsbsms/src/trackpoint.cpp:43:18: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+   43 |   int ki = lrintf(x);
+      |            ~~~~~~^~~
+/home/ember/work/libsbsms/src/trackpoint.cpp:46:6: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+   46 |   if(ki<x) {
+      |      ^~
+/home/ember/work/libsbsms/src/trackpoint.cpp:48:14: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+   48 |     kf = x - ki;
+      |              ^~
+/home/ember/work/libsbsms/src/trackpoint.cpp:51:10: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+   51 |     kf = ki - x;
+      |          ^~
+/home/ember/work/libsbsms/src/trackpoint.cpp: In constructor ‘_sbsms_::Slice::Slice(int, const _sbsms_::TimeType&)’:
+/home/ember/work/libsbsms/src/trackpoint.cpp:132:42: warning: declaration of ‘time’ shadows a member of ‘_sbsms_::Slice’ [-Wshadow]
+  132 | Slice :: Slice(int band, const TimeType &time)
+      |                          ~~~~~~~~~~~~~~~~^~~~
+/home/ember/work/libsbsms/src/trackpoint.h:75:12: note: shadowed declaration is here
+   75 |   TimeType time;
+      |            ^~~~
+/home/ember/work/libsbsms/src/trackpoint.cpp:132:20: warning: declaration of ‘band’ shadows a member of ‘_sbsms_::Slice’ [-Wshadow]
+  132 | Slice :: Slice(int band, const TimeType &time)
+      |                ~~~~^~~~
+/home/ember/work/libsbsms/src/trackpoint.h:74:7: note: shadowed declaration is here
+   74 |   int band;
+      |       ^~~~
+/home/ember/work/libsbsms/src/sms.cpp: In constructor ‘_sbsms_::SMS::SMS(_sbsms_::SMS*, int, int, int, int, int, int, int, int, int, float (*)[2])’:
+/home/ember/work/libsbsms/src/sms.cpp:12:95: warning: declaration of ‘channels’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+   12 | SMS :: SMS(SMS *lo, int N, int band, int bandMax, int h, int res, int N0, int N1, int N2, int channels, audio *peak2)
+      |                                                                                           ~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/sms.h:178:7: note: shadowed declaration is here
+  178 |   int channels;
+      |       ^~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:12:62: warning: declaration of ‘res’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+   12 | SMS :: SMS(SMS *lo, int N, int band, int bandMax, int h, int res, int N0, int N1, int N2, int channels, audio *peak2)
+      |                                                          ~~~~^~~
+/home/ember/work/libsbsms/src/sms.h:179:8: note: shadowed declaration is here
+  179 |   long res;
+      |        ^~~
+/home/ember/work/libsbsms/src/sms.cpp:12:55: warning: declaration of ‘h’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+   12 | SMS :: SMS(SMS *lo, int N, int band, int bandMax, int h, int res, int N0, int N1, int N2, int channels, audio *peak2)
+      |                                                   ~~~~^
+/home/ember/work/libsbsms/src/sms.h:181:7: note: shadowed declaration is here
+  181 |   int h;
+      |       ^
+/home/ember/work/libsbsms/src/sms.cpp:12:32: warning: declaration of ‘band’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+   12 | SMS :: SMS(SMS *lo, int N, int band, int bandMax, int h, int res, int N0, int N1, int N2, int channels, audio *peak2)
+      |                            ~~~~^~~~
+/home/ember/work/libsbsms/src/sms.h:184:7: note: shadowed declaration is here
+  184 |   int band;
+      |       ^~~~
+/home/ember/work/libsbsms/src/sms.cpp:12:25: warning: declaration of ‘N’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+   12 | SMS :: SMS(SMS *lo, int N, int band, int bandMax, int h, int res, int N0, int N1, int N2, int channels, audio *peak2)
+      |                     ~~~~^
+/home/ember/work/libsbsms/src/sms.h:154:7: note: shadowed declaration is here
+  154 |   int N;
+      |       ^
+/home/ember/work/libsbsms/src/sms.cpp:12:17: warning: declaration of ‘lo’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+   12 | SMS :: SMS(SMS *lo, int N, int band, int bandMax, int h, int res, int N0, int N1, int N2, int channels, audio *peak2)
+      |            ~~~~~^~
+/home/ember/work/libsbsms/src/sms.h:156:8: note: shadowed declaration is here
+  156 |   SMS *lo;
+      |        ^~
+/home/ember/work/libsbsms/src/sms.cpp:51:46: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+   51 |   peakWidth0 = lrintf(pad0*(float)N*0.0055f) + 1;
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/sms.cpp:52:46: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+   52 |   peakWidth1 = lrintf(pad1*(float)N*0.0055f) + 1;
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/sms.cpp:53:46: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+   53 |   peakWidth2 = lrintf(pad2*(float)N*0.0055f) + 1;
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/sms.cpp:58:17: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+   58 |   else kLo = max(1L,lrintf(floor(0.5f*(float)N/(float)lo->N*(float)lo->kHi-maxDFMatch*M/TWOPI*(float)N)));
+      |              ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:60:38: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+   60 |   else kHi = max(1L,lrintf(0.4785f * N)-peakWidth0*2);
+      |                                      ^
+/home/ember/work/libsbsms/src/sms.cpp:60:17: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+   60 |   else kHi = max(1L,lrintf(0.4785f * N)-peakWidth0*2);
+      |              ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:63:37: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+   63 |   float kNorm = TWOPI / (float)(M * N);
+      |                                     ^
+/home/ember/work/libsbsms/src/sms.cpp:66:60: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+   66 |   if(lo) maxFMatchM = (float)lo->kHi * TWOPI / (float)(lo->N * M * 2) + maxDFMatch;
+      |                                                        ~~~~^
+/home/ember/work/libsbsms/src/sms.cpp:69:57: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+   69 |   if(lo) maxFMid = (float)lo->kHi * TWOPI / (float)(lo->N * M * 2) + maxDF;
+      |                                                     ~~~~^
+/home/ember/work/libsbsms/src/sms.cpp:73:86: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+   73 |     minK = max(1L,(lrintf(0.25f * (float)N / (float)lo->lo->N * (float)lo->lo->kHi + peakWidth0)));
+      |                                                                                      ^~~~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:73:15: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+   73 |     minK = max(1L,(lrintf(0.25f * (float)N / (float)lo->lo->N * (float)lo->lo->kHi + peakWidth0)));
+      |            ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:88:26: warning: conversion from ‘int’ to ‘std::queue<unsigned char>::value_type’ {aka ‘unsigned char’} may change value [-Wconversion]
+   88 |       trackIndex[c].push(k);
+      |                          ^
+/home/ember/work/libsbsms/src/slide.cpp: In member function ‘virtual float _sbsms_::IdentitySlide::getRate(float)’:
+/home/ember/work/libsbsms/src/slide.cpp:36:23: warning: unused parameter ‘t’ [-Wunused-parameter]
+   36 |   float getRate(float t) {
+      |                 ~~~~~~^
+/home/ember/work/libsbsms/src/slide.cpp: In member function ‘virtual float _sbsms_::IdentitySlide::getStretch(float)’:
+/home/ember/work/libsbsms/src/slide.cpp:39:26: warning: unused parameter ‘t’ [-Wunused-parameter]
+   39 |   float getStretch(float t) {
+      |                    ~~~~~~^
+/home/ember/work/libsbsms/src/slide.cpp: In member function ‘virtual float _sbsms_::IdentitySlide::getMeanStretch(float, float)’:
+/home/ember/work/libsbsms/src/slide.cpp:42:30: warning: unused parameter ‘t0’ [-Wunused-parameter]
+   42 |   float getMeanStretch(float t0, float t1) {
+      |                        ~~~~~~^~
+/home/ember/work/libsbsms/src/slide.cpp:42:40: warning: unused parameter ‘t1’ [-Wunused-parameter]
+   42 |   float getMeanStretch(float t0, float t1) {
+      |                                  ~~~~~~^~
+/home/ember/work/libsbsms/src/slide.cpp: In constructor ‘_sbsms_::ConstantSlide::ConstantSlide(float)’:
+/home/ember/work/libsbsms/src/slide.cpp:57:23: warning: declaration of ‘rate’ shadows a member of ‘_sbsms_::ConstantSlide’ [-Wshadow]
+   57 |   ConstantSlide(float rate) {
+      |                 ~~~~~~^~~~
+/home/ember/work/libsbsms/src/slide.cpp:87:9: note: shadowed declaration is here
+   87 |   float rate;
+      |         ^~~~
+/home/ember/work/libsbsms/src/slide.cpp: In member function ‘virtual float _sbsms_::ConstantSlide::getRate(float)’:
+/home/ember/work/libsbsms/src/slide.cpp:69:23: warning: unused parameter ‘t’ [-Wunused-parameter]
+   69 |   float getRate(float t) {
+      |                 ~~~~~~^
+/home/ember/work/libsbsms/src/slide.cpp: In member function ‘virtual float _sbsms_::ConstantSlide::getStretch(float)’:
+/home/ember/work/libsbsms/src/slide.cpp:72:26: warning: unused parameter ‘t’ [-Wunused-parameter]
+   72 |   float getStretch(float t) {
+      |                    ~~~~~~^
+/home/ember/work/libsbsms/src/slide.cpp: In member function ‘virtual float _sbsms_::ConstantSlide::getMeanStretch(float, float)’:
+/home/ember/work/libsbsms/src/slide.cpp:75:30: warning: unused parameter ‘t0’ [-Wunused-parameter]
+   75 |   float getMeanStretch(float t0, float t1) {
+      |                        ~~~~~~^~
+/home/ember/work/libsbsms/src/slide.cpp:75:40: warning: unused parameter ‘t1’ [-Wunused-parameter]
+   75 |   float getMeanStretch(float t0, float t1) {
+      |                                  ~~~~~~^~
+/home/ember/work/libsbsms/src/slide.cpp: In constructor ‘_sbsms_::LinearInputRateSlide::LinearInputRateSlide(float, float, const _sbsms_::SampleCountType&)’:
+/home/ember/work/libsbsms/src/slide.cpp:92:43: warning: declaration of ‘rate1’ shadows a member of ‘_sbsms_::LinearInputRateSlide’ [-Wshadow]
+   92 |   LinearInputRateSlide(float rate0, float rate1, const SampleCountType &n) {
+      |                                     ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:129:16: note: shadowed declaration is here
+  129 |   float rate0, rate1;
+      |                ^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:92:30: warning: declaration of ‘rate0’ shadows a member of ‘_sbsms_::LinearInputRateSlide’ [-Wshadow]
+   92 |   LinearInputRateSlide(float rate0, float rate1, const SampleCountType &n) {
+      |                        ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:129:9: note: shadowed declaration is here
+  129 |   float rate0, rate1;
+      |         ^~~~~
+/home/ember/work/libsbsms/src/slide.cpp: In constructor ‘_sbsms_::LinearOutputRateSlide::LinearOutputRateSlide(float, float, const _sbsms_::SampleCountType&)’:
+/home/ember/work/libsbsms/src/slide.cpp:135:44: warning: declaration of ‘rate1’ shadows a member of ‘_sbsms_::LinearOutputRateSlide’ [-Wshadow]
+  135 |   LinearOutputRateSlide(float rate0, float rate1, const SampleCountType &n) {
+      |                                      ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:175:16: note: shadowed declaration is here
+  175 |   float rate0, rate1;
+      |                ^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:135:31: warning: declaration of ‘rate0’ shadows a member of ‘_sbsms_::LinearOutputRateSlide’ [-Wshadow]
+  135 |   LinearOutputRateSlide(float rate0, float rate1, const SampleCountType &n) {
+      |                         ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:175:9: note: shadowed declaration is here
+  175 |   float rate0, rate1;
+      |         ^~~~~
+/home/ember/work/libsbsms/src/slide.cpp: In constructor ‘_sbsms_::LinearInputStretchSlide::LinearInputStretchSlide(float, float, const _sbsms_::SampleCountType&)’:
+/home/ember/work/libsbsms/src/slide.cpp:181:46: warning: declaration of ‘rate1’ shadows a member of ‘_sbsms_::LinearInputStretchSlide’ [-Wshadow]
+  181 |   LinearInputStretchSlide(float rate0, float rate1, const SampleCountType &n) {
+      |                                        ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:218:16: note: shadowed declaration is here
+  218 |   float rate0, rate1;
+      |                ^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:181:33: warning: declaration of ‘rate0’ shadows a member of ‘_sbsms_::LinearInputStretchSlide’ [-Wshadow]
+  181 |   LinearInputStretchSlide(float rate0, float rate1, const SampleCountType &n) {
+      |                           ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:218:9: note: shadowed declaration is here
+  218 |   float rate0, rate1;
+      |         ^~~~~
+/home/ember/work/libsbsms/src/slide.cpp: In constructor ‘_sbsms_::LinearOutputStretchSlide::LinearOutputStretchSlide(float, float, const _sbsms_::SampleCountType&)’:
+/home/ember/work/libsbsms/src/slide.cpp:224:47: warning: declaration of ‘rate1’ shadows a member of ‘_sbsms_::LinearOutputStretchSlide’ [-Wshadow]
+  224 |   LinearOutputStretchSlide(float rate0, float rate1, const SampleCountType &n) {
+      |                                         ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:262:16: note: shadowed declaration is here
+  262 |   float rate0, rate1;
+      |                ^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:224:34: warning: declaration of ‘rate0’ shadows a member of ‘_sbsms_::LinearOutputStretchSlide’ [-Wshadow]
+  224 |   LinearOutputStretchSlide(float rate0, float rate1, const SampleCountType &n) {
+      |                            ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:262:9: note: shadowed declaration is here
+  262 |   float rate0, rate1;
+      |         ^~~~~
+/home/ember/work/libsbsms/src/slide.cpp: In constructor ‘_sbsms_::GeometricInputSlide::GeometricInputSlide(float, float, const _sbsms_::SampleCountType&)’:
+/home/ember/work/libsbsms/src/slide.cpp:269:42: warning: declaration of ‘rate1’ shadows a member of ‘_sbsms_::GeometricInputSlide’ [-Wshadow]
+  269 |   GeometricInputSlide(float rate0, float rate1, const SampleCountType &n) {
+      |                                    ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:307:16: note: shadowed declaration is here
+  307 |   float rate0, rate1, c0, log01;
+      |                ^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:269:29: warning: declaration of ‘rate0’ shadows a member of ‘_sbsms_::GeometricInputSlide’ [-Wshadow]
+  269 |   GeometricInputSlide(float rate0, float rate1, const SampleCountType &n) {
+      |                       ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:307:9: note: shadowed declaration is here
+  307 |   float rate0, rate1, c0, log01;
+      |         ^~~~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘void _sbsms_::SMS::adjust1(float, float, float)’:
+/home/ember/work/libsbsms/src/sms.cpp:398:18: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  398 |   int h2i = lrint(h2cum);
+      |             ~~~~~^~~~~~~
+/home/ember/work/libsbsms/src/slide.cpp: In constructor ‘_sbsms_::GeometricOutputSlide::GeometricOutputSlide(float, float, const _sbsms_::SampleCountType&)’:
+/home/ember/work/libsbsms/src/slide.cpp:313:43: warning: declaration of ‘rate1’ shadows a member of ‘_sbsms_::GeometricOutputSlide’ [-Wshadow]
+  313 |   GeometricOutputSlide(float rate0, float rate1, const SampleCountType &n) {
+      |                                     ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:353:16: note: shadowed declaration is here
+  353 |   float rate0, rate1;
+      |                ^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:313:30: warning: declaration of ‘rate0’ shadows a member of ‘_sbsms_::GeometricOutputSlide’ [-Wshadow]
+  313 |   GeometricOutputSlide(float rate0, float rate1, const SampleCountType &n) {
+      |                        ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/slide.cpp:353:9: note: shadowed declaration is here
+  353 |   float rate0, rate1;
+      |         ^~~~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘int _sbsms_::SMS::findCut(float*, int, int)’:
+/home/ember/work/libsbsms/src/sms.cpp:440:45: warning: declaration of ‘maxK’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  440 | int SMS :: findCut(float *dmag, int k0, int maxK)
+      |                                         ~~~~^~~~
+/home/ember/work/libsbsms/src/sms.h:104:7: note: shadowed declaration is here
+  104 |   int maxK;
+      |       ^~~~
+/home/ember/work/libsbsms/src/grain.cpp: In constructor ‘_sbsms_::GrainAllocator::GrainAllocator(int, int, int)’:
+/home/ember/work/libsbsms/src/grain.cpp:13:53: warning: declaration of ‘type’ shadows a member of ‘_sbsms_::GrainAllocator’ [-Wshadow]
+   13 | GrainAllocator :: GrainAllocator(int N, int N2, int type)
+      |                                                 ~~~~^~~~
+/home/ember/work/libsbsms/src/grain.h:47:7: note: shadowed declaration is here
+   47 |   int type;
+      |       ^~~~
+/home/ember/work/libsbsms/src/grain.cpp:13:45: warning: declaration of ‘N2’ shadows a member of ‘_sbsms_::GrainAllocator’ [-Wshadow]
+   13 | GrainAllocator :: GrainAllocator(int N, int N2, int type)
+      |                                         ~~~~^~
+/home/ember/work/libsbsms/src/grain.h:46:7: note: shadowed declaration is here
+   46 |   int N2;
+      |       ^~
+/home/ember/work/libsbsms/src/grain.cpp:13:38: warning: declaration of ‘N’ shadows a member of ‘_sbsms_::GrainAllocator’ [-Wshadow]
+   13 | GrainAllocator :: GrainAllocator(int N, int N2, int type)
+      |                                  ~~~~^
+/home/ember/work/libsbsms/src/grain.h:45:7: note: shadowed declaration is here
+   45 |   int N;
+      |       ^
+/home/ember/work/libsbsms/src/slide.cpp: In constructor ‘_sbsms_::SBSMSInterfaceSlidingImp::SBSMSInterfaceSlidingImp(_sbsms_::Slide*, _sbsms_::Slide*, bool, const _sbsms_::SampleCountType&, long int, _sbsms_::SBSMSQuality*)’:
+/home/ember/work/libsbsms/src/slide.cpp:464:59: warning: declaration of ‘preSamples’ shadows a member of ‘_sbsms_::SBSMSInterfaceSlidingImp’ [-Wshadow]
+  464 |                                                      long preSamples,
+      |                                                      ~~~~~^~~~~~~~~~
+/home/ember/work/libsbsms/src/slide.cpp:455:8: note: shadowed declaration is here
+  455 |   long preSamples;
+      |        ^~~~~~~~~~
+/home/ember/work/libsbsms/src/slide.cpp:463:77: warning: declaration of ‘samplesToInput’ shadows a member of ‘_sbsms_::SBSMSInterfaceSlidingImp’ [-Wshadow]
+  463 |                                                      const SampleCountType &samplesToInput,
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/slide.cpp:456:19: note: shadowed declaration is here
+  456 |   SampleCountType samplesToInput;
+      |                   ^~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/slide.cpp:462:59: warning: declaration of ‘bPitchReferenceInput’ shadows a member of ‘_sbsms_::SBSMSInterfaceSlidingImp’ [-Wshadow]
+  462 |                                                      bool bPitchReferenceInput,
+      |                                                      ~~~~~^~~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/slide.cpp:452:8: note: shadowed declaration is here
+  452 |   bool bPitchReferenceInput;
+      |        ^~~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/slide.cpp:461:61: warning: declaration of ‘pitchSlide’ shadows a member of ‘_sbsms_::SBSMSInterfaceSlidingImp’ [-Wshadow]
+  461 |                                                      Slide *pitchSlide,
+      |                                                      ~~~~~~~^~~~~~~~~~
+/home/ember/work/libsbsms/src/slide.cpp:451:10: note: shadowed declaration is here
+  451 |   Slide *pitchSlide;
+      |          ^~~~~~~~~~
+/home/ember/work/libsbsms/src/slide.cpp:460:61: warning: declaration of ‘stretchSlide’ shadows a member of ‘_sbsms_::SBSMSInterfaceSlidingImp’ [-Wshadow]
+  460 | SBSMSInterfaceSlidingImp :: SBSMSInterfaceSlidingImp(Slide *stretchSlide,
+      |                                                      ~~~~~~~^~~~~~~~~~~~
+/home/ember/work/libsbsms/src/slide.cpp:450:10: note: shadowed declaration is here
+  450 |   Slide *stretchSlide;
+      |          ^~~~~~~~~~~~
+/home/ember/work/libsbsms/src/grain.cpp: In constructor ‘_sbsms_::grain::grain(int, int)’:
+/home/ember/work/libsbsms/src/grain.cpp:89:20: warning: declaration of ‘N’ shadows a member of ‘_sbsms_::grain’ [-Wshadow]
+   89 | grain :: grain(int N, int N2)
+      |                ~~~~^
+/home/ember/work/libsbsms/src/grain.h:28:7: note: shadowed declaration is here
+   28 |   int N;
+      |       ^
+/home/ember/work/libsbsms/src/slide.cpp:481:44: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  481 |     int inFrameSize = quality->getFrameSize();
+      |                       ~~~~~~~~~~~~~~~~~~~~~^~
+/home/ember/work/libsbsms/src/slide.cpp:486:38: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+  486 |       outFrameSizefloat += stretch * inFrameSize;
+      |                                      ^~~~~~~~~~~
+/home/ember/work/libsbsms/src/grain.cpp: In member function ‘void _sbsms_::grain::analyze()’:
+/home/ember/work/libsbsms/src/grain.cpp:103:10: warning: declaration of ‘x’ shadows a member of ‘_sbsms_::grain’ [-Wshadow]
+  103 |   float *x = (float*)this->x;
+      |          ^
+/home/ember/work/libsbsms/src/grain.h:23:10: note: shadowed declaration is here
+   23 |   audio *x;
+      |          ^
+/home/ember/work/libsbsms/src/slide.cpp:492:80: warning: conversion from ‘_sbsms_::SampleCountType’ {aka ‘long long int’} to ‘float’ may change value [-Wconversion]
+  492 |     SampleCountType samplesOutputed = samplesOut - lrintf(stretch * (samplesIn - samplesToInput));
+      |                                                                     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/grain.cpp:105:10: warning: declaration of ‘w’ shadows a member of ‘_sbsms_::grain’ [-Wshadow]
+  105 |   float *w = this->w;
+      |          ^
+/home/ember/work/libsbsms/src/grain.h:27:10: note: shadowed declaration is here
+   27 |   float *w;
+      |          ^
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘void _sbsms_::SMS::adjust(_sbsms_::GrainBuf*, std::queue<float*>*, int, float**, float**, float (**)[2], const _sbsms_::TimeType&, _sbsms_::Slice**)’:
+/home/ember/work/libsbsms/src/sms.cpp:574:19: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+  574 |         if(p->x > k2) continue;
+      |                   ^~
+/home/ember/work/libsbsms/src/sms.cpp:577:17: warning: declaration of ‘k’ shadows a previous local [-Wshadow]
+  577 |         for(int k=k0;k<=k2;k++) {
+      |                 ^
+/home/ember/work/libsbsms/src/sms.cpp:524:11: note: shadowed declaration is here
+  524 |       int k = minK;
+      |           ^
+/home/ember/work/libsbsms/src/sms.cpp:582:28: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+  582 |         while(p && p->x <= k2) {
+      |                            ^~
+/home/ember/work/libsbsms/src/sms.cpp:494:36: warning: unused parameter ‘time’ [-Wunused-parameter]
+  494 |                    const TimeType &time,
+      |                    ~~~~~~~~~~~~~~~~^~~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘_sbsms_::TrackPoint* _sbsms_::SMS::nearestForward(_sbsms_::TrackPoint**, _sbsms_::TrackPoint*, float*, float, float, float, float)’:
+/home/ember/work/libsbsms/src/sms.cpp:642:140: warning: declaration of ‘dNCoeff2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  642 | TrackPoint *SMS :: nearestForward(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                                                                      ~~~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/sms.h:109:9: note: shadowed declaration is here
+  109 |   float dNCoeff2;
+      |         ^~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:642:124: warning: declaration of ‘dMCoeff2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  642 | TrackPoint *SMS :: nearestForward(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                                                      ~~~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/sms.h:108:9: note: shadowed declaration is here
+  108 |   float dMCoeff2;
+      |         ^~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:642:111: warning: declaration of ‘maxDF’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  642 | TrackPoint *SMS :: nearestForward(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                                         ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/sms.h:107:9: note: shadowed declaration is here
+  107 |   float maxDF;
+      |         ^~~~~
+/home/ember/work/libsbsms/src/sms.cpp:642:95: warning: declaration of ‘maxCost2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  642 | TrackPoint *SMS :: nearestForward(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                         ~~~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/sms.h:106:9: note: shadowed declaration is here
+  106 |   float maxCost2;
+      |         ^~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:646:9: warning: unused variable ‘maxF’ [-Wunused-variable]
+  646 |   float maxF = tp0->f + maxDF;
+      |         ^~~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘_sbsms_::TrackPoint* _sbsms_::SMS::nearestReverse(_sbsms_::TrackPoint**, _sbsms_::TrackPoint*, float*, float, float, float, float)’:
+/home/ember/work/libsbsms/src/sms.cpp:669:140: warning: declaration of ‘dNCoeff2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  669 | TrackPoint *SMS :: nearestReverse(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                                                                      ~~~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/sms.h:109:9: note: shadowed declaration is here
+  109 |   float dNCoeff2;
+      |         ^~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:669:124: warning: declaration of ‘dMCoeff2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  669 | TrackPoint *SMS :: nearestReverse(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                                                      ~~~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/sms.h:108:9: note: shadowed declaration is here
+  108 |   float dMCoeff2;
+      |         ^~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:669:111: warning: declaration of ‘maxDF’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  669 | TrackPoint *SMS :: nearestReverse(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                                         ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/sms.h:107:9: note: shadowed declaration is here
+  107 |   float maxDF;
+      |         ^~~~~
+/home/ember/work/libsbsms/src/sms.cpp:669:95: warning: declaration of ‘maxCost2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  669 | TrackPoint *SMS :: nearestReverse(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                         ~~~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/sms.h:106:9: note: shadowed declaration is here
+  106 |   float maxCost2;
+      |         ^~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:672:9: warning: unused variable ‘minF’ [-Wunused-variable]
+  672 |   float minF = tp0->f - maxDF;
+      |         ^~~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘_sbsms_::TrackPoint* _sbsms_::SMS::nearestForward2(_sbsms_::TrackPoint**, _sbsms_::TrackPoint*, float*, float, float, float, float)’:
+/home/ember/work/libsbsms/src/sms.cpp:696:141: warning: declaration of ‘dNCoeff2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  696 | TrackPoint *SMS :: nearestForward2(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                                                                       ~~~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/sms.h:109:9: note: shadowed declaration is here
+  109 |   float dNCoeff2;
+      |         ^~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:696:125: warning: declaration of ‘dMCoeff2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  696 | TrackPoint *SMS :: nearestForward2(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                                                       ~~~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/sms.h:108:9: note: shadowed declaration is here
+  108 |   float dMCoeff2;
+      |         ^~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:696:112: warning: declaration of ‘maxDF’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  696 | TrackPoint *SMS :: nearestForward2(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                                          ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/sms.h:107:9: note: shadowed declaration is here
+  107 |   float maxDF;
+      |         ^~~~~
+/home/ember/work/libsbsms/src/sms.cpp:696:96: warning: declaration of ‘maxCost2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  696 | TrackPoint *SMS :: nearestForward2(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                          ~~~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/sms.h:106:9: note: shadowed declaration is here
+  106 |   float maxCost2;
+      |         ^~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:700:9: warning: unused variable ‘maxF’ [-Wunused-variable]
+  700 |   float maxF = tp0->f + maxDF;
+      |         ^~~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘_sbsms_::TrackPoint* _sbsms_::SMS::nearestReverse2(_sbsms_::TrackPoint**, _sbsms_::TrackPoint*, float*, float, float, float, float)’:
+/home/ember/work/libsbsms/src/sms.cpp:723:141: warning: declaration of ‘dNCoeff2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  723 | TrackPoint *SMS :: nearestReverse2(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                                                                       ~~~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/sms.h:109:9: note: shadowed declaration is here
+  109 |   float dNCoeff2;
+      |         ^~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:723:125: warning: declaration of ‘dMCoeff2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  723 | TrackPoint *SMS :: nearestReverse2(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                                                       ~~~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/sms.h:108:9: note: shadowed declaration is here
+  108 |   float dMCoeff2;
+      |         ^~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:723:112: warning: declaration of ‘maxDF’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  723 | TrackPoint *SMS :: nearestReverse2(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                                          ~~~~~~^~~~~
+/home/ember/work/libsbsms/src/sms.h:107:9: note: shadowed declaration is here
+  107 |   float maxDF;
+      |         ^~~~~
+/home/ember/work/libsbsms/src/sms.cpp:723:96: warning: declaration of ‘maxCost2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  723 | TrackPoint *SMS :: nearestReverse2(TrackPoint **begin, TrackPoint *tp0, float *minCost2, float maxCost2, float maxDF, float dMCoeff2, float dNCoeff2)
+      |                                                                                          ~~~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/sms.h:106:9: note: shadowed declaration is here
+  106 |   float maxCost2;
+      |         ^~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:726:9: warning: unused variable ‘minF’ [-Wunused-variable]
+  726 |   float minF = tp0->f - maxDF;
+      |         ^~~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘void _sbsms_::SMS::connect(_sbsms_::TrackPoint*, _sbsms_::TrackPoint*, int, int)’:
+/home/ember/work/libsbsms/src/sms.cpp:769:16: warning: declaration of ‘time’ shadows a previous local [-Wshadow]
+  769 |       TimeType time = precursor->end/res;
+      |                ^~~~
+/home/ember/work/libsbsms/src/sms.cpp:752:12: note: shadowed declaration is here
+  752 |   TimeType time = assigntime[c];
+      |            ^~~~
+/home/ember/work/libsbsms/src/sms.cpp:784:16: warning: declaration of ‘time’ shadows a previous local [-Wshadow]
+  784 |       TimeType time = precursor->end/res;
+      |                ^~~~
+/home/ember/work/libsbsms/src/sms.cpp:752:12: note: shadowed declaration is here
+  752 |   TimeType time = assigntime[c];
+      |            ^~~~
+/home/ember/work/libsbsms/src/sms.cpp:807:14: warning: declaration of ‘time’ shadows a previous local [-Wshadow]
+  807 |     TimeType time = precursor->end*hi->res;
+      |              ^~~~
+/home/ember/work/libsbsms/src/sms.cpp:752:12: note: shadowed declaration is here
+  752 |   TimeType time = assigntime[c];
+      |            ^~~~
+/home/ember/work/libsbsms/src/sms.cpp:752:12: warning: unused variable ‘time’ [-Wunused-variable]
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘void _sbsms_::SMS::mark(long int, long int, int)’:
+/home/ember/work/libsbsms/src/sms.cpp:858:10: warning: declaration of ‘sliceL1’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  858 |   Slice *sliceL1 = lo->sliceBuffer[c].read(lo->sliceBuffer[c].readPos+offset/res+offsetlo);
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.h:138:10: note: shadowed declaration is here
+  138 |   Slice* sliceL1[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:865:10: warning: declaration of ‘sliceM1’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+  865 |   Slice *sliceM1 = sliceBuffer[c].read(sliceBuffer[c].readPos+offset);
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.h:137:10: note: shadowed declaration is here
+  137 |   Slice* sliceM1[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘void _sbsms_::SMS::assignInit(long int, int)’:
+/home/ember/work/libsbsms/src/sms.cpp:986:29: warning: unused parameter ‘offset’ [-Wunused-parameter]
+  986 | void SMS :: assignInit(long offset, int c)
+      |                        ~~~~~^~~~~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘void _sbsms_::SMS::assignFind(long int, int)’:
+/home/ember/work/libsbsms/src/sms.cpp:1007:10: warning: declaration of ‘sliceM0’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1007 |   Slice *sliceM0 = this->sliceM0[c];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.h:134:10: note: shadowed declaration is here
+  134 |   Slice* sliceM0[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1008:10: warning: declaration of ‘sliceM1’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1008 |   Slice *sliceM1 = this->sliceM1[c];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.h:137:10: note: shadowed declaration is here
+  137 |   Slice* sliceM1[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1009:10: warning: declaration of ‘sliceM2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1009 |   Slice *sliceM2 = this->sliceM2[c];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.h:139:10: note: shadowed declaration is here
+  139 |   Slice* sliceM2[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1010:10: warning: declaration of ‘sliceL1’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1010 |   Slice *sliceL1 = this->sliceL1[c];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.h:138:10: note: shadowed declaration is here
+  138 |   Slice* sliceL1[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1011:10: warning: declaration of ‘sliceH1’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1011 |   Slice *sliceH1 = this->sliceH1[c];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.h:140:10: note: shadowed declaration is here
+  140 |   Slice* sliceH1[2];
+      |          ^~~~~~~
+In file included from /home/ember/work/libsbsms/src/synthTable.h:4,
+                 from /home/ember/work/libsbsms/src/track.cpp:5:
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canonPI(float)’:
+/home/ember/work/libsbsms/src/utils.h:40:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   40 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canon2PI(float)’:
+/home/ember/work/libsbsms/src/utils.h:48:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   48 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘bool _sbsms_::SMS::assignConnect(long int, int, bool)’:
+/home/ember/work/libsbsms/src/sms.cpp:1100:10: warning: declaration of ‘sliceM0’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1100 |   Slice *sliceM0 = this->sliceM0[c];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.h:134:10: note: shadowed declaration is here
+  134 |   Slice* sliceM0[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1101:10: warning: declaration of ‘sliceM1’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1101 |   Slice *sliceM1 = this->sliceM1[c];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.h:137:10: note: shadowed declaration is here
+  137 |   Slice* sliceM1[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1102:10: warning: declaration of ‘sliceL1’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1102 |   Slice *sliceL1 = this->sliceL1[c];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.h:138:10: note: shadowed declaration is here
+  138 |   Slice* sliceL1[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1103:10: warning: declaration of ‘sliceH1’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1103 |   Slice *sliceH1 = this->sliceH1[c];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.h:140:10: note: shadowed declaration is here
+  140 |   Slice* sliceH1[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1177:14: warning: unused variable ‘time’ [-Wunused-variable]
+ 1177 |     TimeType time = assigntime[c];
+      |              ^~~~
+/home/ember/work/libsbsms/src/track.cpp: In constructor ‘_sbsms_::Track::Track(float, _sbsms_::TrackIndexType, _sbsms_::TrackPoint*, const _sbsms_::TimeType&, bool)’:
+/home/ember/work/libsbsms/src/track.cpp:12:89: warning: declaration of ‘bStitch’ shadows a member of ‘_sbsms_::Track’ [-Wshadow]
+   12 | Track :: Track(float h, TrackIndexType index, TrackPoint *p, const TimeType &time, bool bStitch)
+      |                                                                                    ~~~~~^~~~~~~
+In file included from /home/ember/work/libsbsms/src/track.cpp:3:
+/home/ember/work/libsbsms/src/track.h:76:8: note: shadowed declaration is here
+   76 |   bool bStitch;
+      |        ^~~~~~~
+/home/ember/work/libsbsms/src/track.cpp:12:40: warning: declaration of ‘index’ shadows a member of ‘_sbsms_::Track’ [-Wshadow]
+   12 | Track :: Track(float h, TrackIndexType index, TrackPoint *p, const TimeType &time, bool bStitch)
+      |                         ~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/track.h:68:18: note: shadowed declaration is here
+   68 |   TrackIndexType index;
+      |                  ^~~~~
+/home/ember/work/libsbsms/src/track.cpp:12:22: warning: declaration of ‘h’ shadows a member of ‘_sbsms_::Track’ [-Wshadow]
+   12 | Track :: Track(float h, TrackIndexType index, TrackPoint *p, const TimeType &time, bool bStitch)
+      |                ~~~~~~^
+/home/ember/work/libsbsms/src/track.h:66:9: note: shadowed declaration is here
+   66 |   float h;
+      |         ^
+/home/ember/work/libsbsms/src/track.cpp: In member function ‘_sbsms_::TrackPoint* _sbsms_::Track::updateFPH(const _sbsms_::TimeType&, int, int, float, float)’:
+/home/ember/work/libsbsms/src/track.cpp:130:57: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+  130 |         float dwSynth = 0.5f * canonPI(dp - dpStereo) / n;
+      |                                                         ^
+/home/ember/work/libsbsms/src/track.cpp:172:52: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+  172 |         float dw = (tp1->fSynth1 - tp0->fSynth0) / n;
+      |                                                    ^
+/home/ember/work/libsbsms/src/track.cpp:174:26: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+  174 |         float iw = lrintf(w * WScale) / WScale;
+      |                    ~~~~~~^~~~~~~~~~~~
+/home/ember/work/libsbsms/src/track.cpp:175:27: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+  175 |         float idw = lrintf(dw * WScale) / WScale;
+      |                     ~~~~~~^~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/track.cpp:176:48: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+  176 |         tp1->phSynth = canon2PI(tp0->phSynth + n * iw + ((n * (n - 1)) >> 1) * idw);
+      |                                                ^
+/home/ember/work/libsbsms/src/track.cpp:176:72: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+  176 |         tp1->phSynth = canon2PI(tp0->phSynth + n * iw + ((n * (n - 1)) >> 1) * idw);
+      |                                                         ~~~~~~~~~~~~~~~^~~~~
+/home/ember/work/libsbsms/src/track.cpp: In member function ‘void _sbsms_::Track::endTrack(bool)’:
+/home/ember/work/libsbsms/src/track.cpp:230:29: warning: declaration of ‘bStitch’ shadows a member of ‘_sbsms_::Track’ [-Wshadow]
+  230 | void Track :: endTrack(bool bStitch)
+      |                        ~~~~~^~~~~~~
+/home/ember/work/libsbsms/src/track.h:76:8: note: shadowed declaration is here
+   76 |   bool bStitch;
+      |        ^~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘void _sbsms_::SMS::start(long int, int)’:
+/home/ember/work/libsbsms/src/sms.cpp:1281:10: warning: declaration of ‘sliceM0’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1281 |   Slice *sliceM0 = sliceBuffer[c].read(sliceBuffer[c].readPos+offset);
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.h:134:10: note: shadowed declaration is here
+  134 |   Slice* sliceM0[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/track.cpp: In member function ‘void _sbsms_::Track::synth(float*, const _sbsms_::TimeType&, int, int, int)’:
+/home/ember/work/libsbsms/src/track.cpp:284:12: warning: declaration of ‘end’ shadows a member of ‘_sbsms_::Track’ [-Wshadow]
+  284 |     float *end = out + fall;
+      |            ^~~
+/home/ember/work/libsbsms/src/sms.cpp:1295:14: warning: unused variable ‘t’ [-Wunused-variable]
+ 1295 |       Track *t = createTrack(c,tp,assigntime[c],false);
+      |              ^
+/home/ember/work/libsbsms/src/track.h:71:12: note: shadowed declaration is here
+   71 |   TimeType end;
+      |            ^~~
+/home/ember/work/libsbsms/src/track.cpp:306:12: warning: declaration of ‘end’ shadows a member of ‘_sbsms_::Track’ [-Wshadow]
+  306 |     float *end = out-rise;
+      |            ^~~
+/home/ember/work/libsbsms/src/track.h:71:12: note: shadowed declaration is here
+   71 |   TimeType end;
+      |            ^~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘void _sbsms_::SMS::splitMerge(int)’:
+/home/ember/work/libsbsms/src/sms.cpp:1315:10: warning: declaration of ‘sliceM0’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1315 |   Slice *sliceM0 = this->sliceM0[c];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.h:134:10: note: shadowed declaration is here
+  134 |   Slice* sliceM0[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1316:10: warning: declaration of ‘sliceL0’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1316 |   Slice *sliceL0 = this->sliceL0[c];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/track.cpp:324:28: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+  324 |     float dw = (w1 - w0) / n;
+      |                            ^
+/home/ember/work/libsbsms/src/sms.h:135:10: note: shadowed declaration is here
+  135 |   Slice* sliceL0[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1317:10: warning: declaration of ‘sliceH0’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1317 |   Slice *sliceH0 = this->sliceH0[c];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/track.cpp:326:28: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+  326 |     float dm = (m1 - m0) / n;
+      |                            ^
+/home/ember/work/libsbsms/src/sms.h:136:10: note: shadowed declaration is here
+  136 |   Slice* sliceH0[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1318:10: warning: declaration of ‘sliceM1’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1318 |   Slice *sliceM1 = this->sliceM1[c];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/track.cpp:332:12: warning: declaration of ‘end’ shadows a member of ‘_sbsms_::Track’ [-Wshadow]
+  332 |     float *end = out + n;
+      |            ^~~
+/home/ember/work/libsbsms/src/sms.h:137:10: note: shadowed declaration is here
+  137 |   Slice* sliceM1[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/track.h:71:12: note: shadowed declaration is here
+   71 |   TimeType end;
+      |            ^~~
+/home/ember/work/libsbsms/src/sms.cpp:1319:10: warning: declaration of ‘sliceL1’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1319 |   Slice *sliceL1 = this->sliceL1[c];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.h:138:10: note: shadowed declaration is here
+  138 |   Slice* sliceL1[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1320:10: warning: declaration of ‘sliceH1’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1320 |   Slice *sliceH1 = this->sliceH1[c];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/sms.h:140:10: note: shadowed declaration is here
+  140 |   Slice* sliceH1[2];
+      |          ^~~~~~~
+/home/ember/work/libsbsms/src/track.cpp:243:25: warning: unused parameter ‘mode’ [-Wunused-parameter]
+  243 |                     int mode,
+      |                     ~~~~^~~~
+/home/ember/work/libsbsms/src/track.cpp:244:25: warning: unused parameter ‘c’ [-Wunused-parameter]
+  244 |                     int c)
+      |                     ~~~~^
+/home/ember/work/libsbsms/src/sms.cpp:1311:12: warning: unused variable ‘time’ [-Wunused-variable]
+ 1311 |   TimeType time = assigntime[c] - 1;
+      |            ^~~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘void _sbsms_::SMS::add(_sbsms_::grain*, _sbsms_::grain*, _sbsms_::grain*, int)’:
+/home/ember/work/libsbsms/src/sms.cpp:1438:10: warning: declaration of ‘mag2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1438 |   float *mag2 = this->mag2[c];
+      |          ^~~~
+/home/ember/work/libsbsms/src/sms.h:149:10: note: shadowed declaration is here
+  149 |   float *mag2[2];
+      |          ^~~~
+/home/ember/work/libsbsms/src/sms.cpp:1518:10: warning: declaration of ‘dec2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1518 |   float *dec2 = this->dec2[c];
+      |          ^~~~
+/home/ember/work/libsbsms/src/sms.h:151:10: note: shadowed declaration is here
+  151 |   float* dec2[2];
+      |          ^~~~
+/home/ember/work/libsbsms/src/sms.cpp:1521:20: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+ 1521 |     int k1 = lrintf(x0);
+      |              ~~~~~~^~~~
+/home/ember/work/libsbsms/src/sms.cpp:1522:15: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1522 |     int ko1 = k1 > x0 ? -1 : 1;
+      |               ^~
+/home/ember/work/libsbsms/src/sms.cpp:1523:17: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1523 |     float kf1 = k1 > x0 ? k1 - x0 : x0 - k1;
+      |                 ^~
+/home/ember/work/libsbsms/src/sms.cpp:1523:27: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1523 |     float kf1 = k1 > x0 ? k1 - x0 : x0 - k1;
+      |                           ^~
+/home/ember/work/libsbsms/src/sms.cpp:1523:42: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1523 |     float kf1 = k1 > x0 ? k1 - x0 : x0 - k1;
+      |                                          ^~
+/home/ember/work/libsbsms/src/sms.cpp:1525:21: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+ 1525 |     for(int k=lrintf(slice->bottom->xtp2);k<=k3;k++) {
+      |               ~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1531:20: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+ 1531 |     int k1 = lrintf(x1);
+      |              ~~~~~~^~~~
+/home/ember/work/libsbsms/src/sms.cpp:1532:15: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1532 |     int ko1 = k1 > x1 ? -1 : 1;
+      |               ^~
+/home/ember/work/libsbsms/src/sms.cpp:1533:17: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1533 |     float kf1 = k1 > x1 ? k1 - x1 : x1 - k1;
+      |                 ^~
+/home/ember/work/libsbsms/src/sms.cpp:1533:27: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1533 |     float kf1 = k1 > x1 ? k1 - x1 : x1 - k1;
+      |                           ^~
+/home/ember/work/libsbsms/src/sms.cpp:1533:42: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1533 |     float kf1 = k1 > x1 ? k1 - x1 : x1 - k1;
+      |                                          ^~
+/home/ember/work/libsbsms/src/sms.cpp:1534:20: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+ 1534 |     int k3 = lrintf(slice->top->xtn2);
+      |              ~~~~~~^~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1543:20: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+ 1543 |     int k1 = lrintf(p->x);
+      |              ~~~~~~^~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1544:15: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1544 |     int ko1 = k1 > p->x ? -1 : 1;
+      |               ^~
+/home/ember/work/libsbsms/src/sms.cpp:1545:17: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1545 |     float kf1 = k1 > p->x ? k1 - p->x : p->x - k1;
+      |                 ^~
+/home/ember/work/libsbsms/src/sms.cpp:1545:29: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1545 |     float kf1 = k1 > p->x ? k1 - p->x : p->x - k1;
+      |                             ^~
+/home/ember/work/libsbsms/src/sms.cpp:1545:48: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1545 |     float kf1 = k1 > p->x ? k1 - p->x : p->x - k1;
+      |                                                ^~
+/home/ember/work/libsbsms/src/sms.cpp:1546:20: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+ 1546 |     int k0 = lrintf(p->xtp2);
+      |              ~~~~~~^~~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1547:18: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1547 |     float kf0 = (k0 > p->xtp2 ? k0 - p->xtp2 : p->xtp2 - k0);
+      |                  ^~
+/home/ember/work/libsbsms/src/sms.cpp:1547:33: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1547 |     float kf0 = (k0 > p->xtp2 ? k0 - p->xtp2 : p->xtp2 - k0);
+      |                                 ^~
+/home/ember/work/libsbsms/src/sms.cpp:1547:58: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1547 |     float kf0 = (k0 > p->xtp2 ? k0 - p->xtp2 : p->xtp2 - k0);
+      |                                                          ^~
+In file included from /home/ember/work/libsbsms/src/fft.h:7,
+                 from /home/ember/work/libsbsms/src/grain.h:5,
+                 from /home/ember/work/libsbsms/src/buffer.h:6,
+                 from /home/ember/work/libsbsms/src/subband.h:10,
+                 from /home/ember/work/libsbsms/src/sbsms.cpp:9:
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canonPI(float)’:
+/home/ember/work/libsbsms/src/utils.h:40:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   40 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1548:20: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+ 1548 |     int k2 = lrintf(p->xtn2);
+      |              ~~~~~~^~~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1549:18: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1549 |     float kf2 = (k2 > p->xtn2 ? k2 - p->xtn2 : p->xtn2 - k2);
+      |                  ^~
+/home/ember/work/libsbsms/src/sms.cpp:1549:33: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1549 |     float kf2 = (k2 > p->xtn2 ? k2 - p->xtn2 : p->xtn2 - k2);
+      |                                 ^~
+/home/ember/work/libsbsms/src/sms.cpp:1549:58: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1549 |     float kf2 = (k2 > p->xtn2 ? k2 - p->xtn2 : p->xtn2 - k2);
+      |                                                          ^~
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canon2PI(float)’:
+/home/ember/work/libsbsms/src/utils.h:48:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   48 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1551:8: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1551 |     if(k0 < p->xtp2) {
+      |        ^~
+In file included from /home/ember/work/libsbsms/src/fft.h:7,
+                 from /home/ember/work/libsbsms/src/grain.h:5,
+                 from /home/ember/work/libsbsms/src/buffer.h:6,
+                 from /home/ember/work/libsbsms/src/subband.h:10,
+                 from /home/ember/work/libsbsms/src/subband.cpp:3:
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canonPI(float)’:
+/home/ember/work/libsbsms/src/utils.h:40:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   40 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/utils.h: In function ‘float _sbsms_::canon2PI(float)’:
+/home/ember/work/libsbsms/src/utils.h:48:23: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+   48 |   ph -= TWOPI * lrintf(ph * ONEOVERTWOPI);
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1578:8: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1578 |     if(k2 < p->xtn2) {
+      |        ^~
+/home/ember/work/libsbsms/src/sms.cpp:1630:20: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+ 1630 |     int k1 = lrintf(p->x);
+      |              ~~~~~~^~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1631:15: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1631 |     int ko1 = k1 > p->x ? -1 : 1;
+      |               ^~
+/home/ember/work/libsbsms/src/sms.cpp:1632:17: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1632 |     float kf1 = k1 > p->x ? k1 - p->x : p->x - k1;
+      |                 ^~
+/home/ember/work/libsbsms/src/sms.cpp:1632:29: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1632 |     float kf1 = k1 > p->x ? k1 - p->x : p->x - k1;
+      |                             ^~
+/home/ember/work/libsbsms/src/sms.cpp:1632:48: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1632 |     float kf1 = k1 > p->x ? k1 - p->x : p->x - k1;
+      |                                                ^~
+/home/ember/work/libsbsms/src/sms.cpp:1633:20: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+ 1633 |     int k0 = lrintf(p->xtp2);
+      |              ~~~~~~^~~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1634:18: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1634 |     float kf0 = (k0 > p->xtp2 ? k0 - p->xtp2 : p->xtp2 - k0);
+      |                  ^~
+/home/ember/work/libsbsms/src/sms.cpp:1634:33: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1634 |     float kf0 = (k0 > p->xtp2 ? k0 - p->xtp2 : p->xtp2 - k0);
+      |                                 ^~
+/home/ember/work/libsbsms/src/sms.cpp:1634:58: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1634 |     float kf0 = (k0 > p->xtp2 ? k0 - p->xtp2 : p->xtp2 - k0);
+      |                                                          ^~
+/home/ember/work/libsbsms/src/sms.cpp:1635:20: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+ 1635 |     int k2 = lrintf(p->xtn2);
+      |              ~~~~~~^~~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp:1636:18: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1636 |     float kf2 = (k2 > p->xtn2 ? k2 - p->xtn2 : p->xtn2 - k2);
+      |                  ^~
+/home/ember/work/libsbsms/src/sms.cpp:1636:33: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1636 |     float kf2 = (k2 > p->xtn2 ? k2 - p->xtn2 : p->xtn2 - k2);
+      |                                 ^~
+/home/ember/work/libsbsms/src/sms.cpp:1636:58: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1636 |     float kf2 = (k2 > p->xtn2 ? k2 - p->xtn2 : p->xtn2 - k2);
+      |                                                          ^~
+/home/ember/work/libsbsms/src/sms.cpp:1638:8: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1638 |     if(k0 < p->xtp2) {
+      |        ^~
+/home/ember/work/libsbsms/src/sms.cpp:1643:8: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1643 |     if(k2 < p->xtn2) {
+      |        ^~
+/home/ember/work/libsbsms/src/sms.cpp:1631:9: warning: unused variable ‘ko1’ [-Wunused-variable]
+ 1631 |     int ko1 = k1 > p->x ? -1 : 1;
+      |         ^~~
+/home/ember/work/libsbsms/src/sms.cpp:1632:11: warning: unused variable ‘kf1’ [-Wunused-variable]
+ 1632 |     float kf1 = k1 > p->x ? k1 - p->x : p->x - k1;
+      |           ^~~
+/home/ember/work/libsbsms/src/sms.cpp:1456:8: warning: variable ‘bTroughN1’ set but not used [-Wunused-but-set-variable=]
+ 1456 |   bool bTroughN1 = false;
+      |        ^~~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘_sbsms_::Track* _sbsms_::SMS::createTrack(int, _sbsms_::TrackPoint*, const _sbsms_::TimeType&, bool)’:
+/home/ember/work/libsbsms/src/sms.cpp:1711:24: warning: conversion from ‘double’ to ‘float’ may change value [-Wfloat-conversion]
+ 1711 |   Track *t = new Track(h1,index,tp,time,bStitch);
+      |                        ^~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘float _sbsms_::SMS::findExtremum(float*, float*, int, float*)’:
+/home/ember/work/libsbsms/src/sms.cpp:1728:46: warning: declaration of ‘mag2’ shadows a member of ‘_sbsms_::SMS’ [-Wshadow]
+ 1728 | float SMS :: findExtremum(float *mag, float *mag2, int k, float *y)
+      |                                       ~~~~~~~^~~~
+/home/ember/work/libsbsms/src/sms.h:149:10: note: shadowed declaration is here
+  149 |   float *mag2[2];
+      |          ^~~~
+/home/ember/work/libsbsms/src/fft.h: In static member function ‘static int _sbsms_::fft_order_<1>::iterate(int)’:
+/home/ember/work/libsbsms/src/fft.h:810:33: warning: unused parameter ‘k0’ [-Wunused-parameter]
+  810 |   static inline int iterate(int k0) {
+      |                             ~~~~^~
+/home/ember/work/libsbsms/src/sms.cpp:1734:24: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1734 |   float x = (d==0.0f?k:k + 0.5f * (y0 - y2) / d);
+      |                        ^
+/home/ember/work/libsbsms/src/sms.cpp:1734:22: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1734 |   float x = (d==0.0f?k:k + 0.5f * (y0 - y2) / d);
+      |                      ^
+/home/ember/work/libsbsms/src/sms.cpp:1736:20: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+ 1736 |     int ki = lrintf(x);
+      |              ~~~~~~^~~
+/home/ember/work/libsbsms/src/sms.cpp:1737:16: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1737 |     float kf = ki<x?x-ki:ki-x;
+      |                ^~
+/home/ember/work/libsbsms/src/sms.cpp:1737:23: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1737 |     float kf = ki<x?x-ki:ki-x;
+      |                       ^~
+/home/ember/work/libsbsms/src/sms.cpp:1737:26: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1737 |     float kf = ki<x?x-ki:ki-x;
+      |                          ^~
+/home/ember/work/libsbsms/src/sms.cpp:1738:15: warning: conversion from ‘int’ to ‘float’ may change value [-Wconversion]
+ 1738 |     int ki1 = ki<x?ki+1:ki-1;
+      |               ^~
+/home/ember/work/libsbsms/src/sms.cpp: In constructor ‘_sbsms_::SynthRenderer::SynthRenderer(int, int)’:
+/home/ember/work/libsbsms/src/sms.cpp:1758:36: warning: declaration of ‘channels’ shadows a member of ‘_sbsms_::SynthRenderer’ [-Wshadow]
+ 1758 | SynthRenderer :: SynthRenderer(int channels, int h)
+      |                                ~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/sms.h:33:7: note: shadowed declaration is here
+   33 |   int channels;
+      |       ^~~~~~~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘virtual void _sbsms_::SynthRenderer::startTime(int, const _sbsms_::TimeType&, int)’:
+/home/ember/work/libsbsms/src/sms.cpp:1779:66: warning: declaration of ‘n’ shadows a member of ‘_sbsms_::SynthRenderer’ [-Wshadow]
+ 1779 | void SynthRenderer :: startTime(int c, const TimeType &time, int n)
+      |                                                              ~~~~^
+/home/ember/work/libsbsms/src/sms.h:38:7: note: shadowed declaration is here
+   38 |   int n[2];
+      |       ^
+/home/ember/work/libsbsms/src/sms.cpp:1779:56: warning: declaration of ‘time’ shadows a member of ‘_sbsms_::SynthRenderer’ [-Wshadow]
+ 1779 | void SynthRenderer :: startTime(int c, const TimeType &time, int n)
+      |                                        ~~~~~~~~~~~~~~~~^~~~
+/home/ember/work/libsbsms/src/sms.h:37:12: note: shadowed declaration is here
+   37 |   TimeType time[2];
+      |            ^~~~
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘virtual void _sbsms_::SynthRenderer::endTime(int)’:
+/home/ember/work/libsbsms/src/sms.cpp:1801:7: warning: declaration of ‘n’ shadows a member of ‘_sbsms_::SynthRenderer’ [-Wshadow]
+ 1801 |   int n = this->n[c];
+      |       ^
+/home/ember/work/libsbsms/src/sms.h:38:7: note: shadowed declaration is here
+   38 |   int n[2];
+      |       ^
+/home/ember/work/libsbsms/src/sms.cpp: In member function ‘virtual long int _sbsms_::SynthRenderer::read(float (*)[2], long int)’:
+/home/ember/work/libsbsms/src/sms.cpp:1815:45: warning: declaration of ‘n’ shadows a member of ‘_sbsms_::SynthRenderer’ [-Wshadow]
+ 1815 | long SynthRenderer :: read(audio *out, long n)
+      |                                        ~~~~~^
+/home/ember/work/libsbsms/src/sms.h:38:7: note: shadowed declaration is here
+   38 |   int n[2];
+      |       ^
+/home/ember/work/libsbsms/src/fft.h: In static member function ‘static int _sbsms_::fft_order_<1>::iterate(int)’:
+/home/ember/work/libsbsms/src/fft.h:810:33: warning: unused parameter ‘k0’ [-Wunused-parameter]
+  810 |   static inline int iterate(int k0) {
+      |                             ~~~~^~
+/home/ember/work/libsbsms/src/buffer.h: In constructor ‘_sbsms_::ArrayRingBuffer<T>::ArrayRingBuffer(int)’:
+/home/ember/work/libsbsms/src/buffer.h:145:43: warning: declaration of ‘N’ shadows a member of ‘_sbsms_::ArrayRingBuffer<T>’ [-Wshadow]
+  145 | ArrayRingBuffer<T> :: ArrayRingBuffer(int N)
+      |                                       ~~~~^
+/home/ember/work/libsbsms/src/buffer.h:138:7: note: shadowed declaration is here
+  138 |   int N;
+      |       ^
+/home/ember/work/libsbsms/src/buffer.h: In constructor ‘_sbsms_::ArrayRingBuffer<T>::ArrayRingBuffer(int)’:
+/home/ember/work/libsbsms/src/buffer.h:145:43: warning: declaration of ‘N’ shadows a member of ‘_sbsms_::ArrayRingBuffer<T>’ [-Wshadow]
+  145 | ArrayRingBuffer<T> :: ArrayRingBuffer(int N)
+      |                                       ~~~~^
+/home/ember/work/libsbsms/src/buffer.h:138:7: note: shadowed declaration is here
+  138 |   int N;
+      |       ^
+/home/ember/work/libsbsms/src/subband.cpp: In constructor ‘_sbsms_::SubBand::SubBand(_sbsms_::SubBand*, int, int, _sbsms_::SBSMSQuality*, bool)’:
+/home/ember/work/libsbsms/src/subband.cpp:11:89: warning: declaration of ‘bSynthesize’ shadows a member of ‘_sbsms_::SubBand’ [-Wshadow]
+   11 | SubBand :: SubBand(SubBand *parent, int band, int channels, SBSMSQuality *quality, bool bSynthesize)
+      |                                                                                    ~~~~~^~~~~~~~~~~
+/home/ember/work/libsbsms/src/subband.h:136:8: note: shadowed declaration is here
+  136 |   bool bSynthesize;
+      |        ^~~~~~~~~~~
+/home/ember/work/libsbsms/src/subband.cpp:11:75: warning: declaration of ‘quality’ shadows a member of ‘_sbsms_::SubBand’ [-Wshadow]
+   11 | SubBand :: SubBand(SubBand *parent, int band, int channels, SBSMSQuality *quality, bool bSynthesize)
+      |                                                             ~~~~~~~~~~~~~~^~~~~~~
+/home/ember/work/libsbsms/src/subband.h:121:17: note: shadowed declaration is here
+  121 |   SBSMSQuality *quality;
+      |                 ^~~~~~~
+/home/ember/work/libsbsms/src/subband.cpp:11:51: warning: declaration of ‘channels’ shadows a member of ‘_sbsms_::SubBand’ [-Wshadow]
+   11 | SubBand :: SubBand(SubBand *parent, int band, int channels, SBSMSQuality *quality, bool bSynthesize)
+      |                                               ~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/subband.h:122:7: note: shadowed declaration is here
+  122 |   int channels;
+      |       ^~~~~~~~
+/home/ember/work/libsbsms/src/subband.cpp:11:41: warning: declaration of ‘band’ shadows a member of ‘_sbsms_::SubBand’ [-Wshadow]
+   11 | SubBand :: SubBand(SubBand *parent, int band, int channels, SBSMSQuality *quality, bool bSynthesize)
+      |                                     ~~~~^~~~
+/home/ember/work/libsbsms/src/subband.h:125:7: note: shadowed declaration is here
+  125 |   int band;
+      |       ^~~~
+/home/ember/work/libsbsms/src/subband.cpp:11:29: warning: declaration of ‘parent’ shadows a member of ‘_sbsms_::SubBand’ [-Wshadow]
+   11 | SubBand :: SubBand(SubBand *parent, int band, int channels, SBSMSQuality *quality, bool bSynthesize)
+      |                    ~~~~~~~~~^~~~~~
+/home/ember/work/libsbsms/src/subband.h:170:12: note: shadowed declaration is here
+  170 |   SubBand *parent;
+      |            ^~~~~~
+/home/ember/work/libsbsms/src/subband.cpp:34:22: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+   34 |   h = inputFrameSize / (M*nGrainsPerFrame);
+      |       ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/subband.cpp:100:68: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  100 |   sms = new SMS(sub?sub->sms:NULL,N,band,quality->params.bands-1,h,res,N0,N1,N2,channels,analyzedGrains[2][0]->getWindowFFT());
+      |                                                                    ^~~
+/home/ember/work/libsbsms/src/subband.cpp:101:62: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  101 |   nTrial2Latency = sms->getTrial2Latency() / nGrainsPerFrame + 1;
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/subband.cpp:104:61: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  104 |   nAdjust2Latency = nAdjust2LatencyGrains / nGrainsPerFrame + 1;
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/subband.cpp:107:61: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  107 |   nAdjust1Latency = nAdjust1LatencyGrains / nGrainsPerFrame + 1;
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/subband.cpp: In member function ‘void _sbsms_::SubBand::setStretch(float)’:
+/home/ember/work/libsbsms/src/subband.cpp:209:19: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+  209 |     totalSizef -= oFrameSizei;
+      |                   ^~~~~~~~~~~
+/home/ember/work/libsbsms/src/subband.cpp:210:27: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  210 |     outputFrameSize.write(oFrameSizei);
+      |                           ^~~~~~~~~~~
+/home/ember/work/libsbsms/src/subband.cpp: In member function ‘void _sbsms_::SubBand::analyze(int)’:
+/home/ember/work/libsbsms/src/subband.cpp:478:26: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  478 |     for(int k=grains[i]->readPos;k<grains[i]->readPos+nGrainsToAnalyze[i];k++) {
+      |               ~~~~~~~~~~~^~~~~~~
+/home/ember/work/libsbsms/src/subband.cpp: In member function ‘void _sbsms_::SubBand::extract(int)’:
+/home/ember/work/libsbsms/src/subband.cpp:515:39: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  515 |       for(int k=analyzedGrains[i][c]->readPos;
+      |                 ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/home/ember/work/libsbsms/src/sbsms.cpp: In constructor ‘_sbsms_::SBSMSImp::SBSMSImp(int, _sbsms_::SBSMSQuality*, bool)’:
+/home/ember/work/libsbsms/src/sbsms.cpp:604:50: warning: declaration of ‘quality’ shadows a member of ‘_sbsms_::SBSMSImp’ [-Wshadow]
+  604 | SBSMSImp :: SBSMSImp(int channels, SBSMSQuality *quality, bool bSynthesize)
+      |                                    ~~~~~~~~~~~~~~^~~~~~~
+/home/ember/work/libsbsms/src/sbsms.cpp:71:17: note: shadowed declaration is here
+   71 |   SBSMSQuality *quality;
+      |                 ^~~~~~~
+/home/ember/work/libsbsms/src/sbsms.cpp:604:26: warning: declaration of ‘channels’ shadows a member of ‘_sbsms_::SBSMSImp’ [-Wshadow]
+  604 | SBSMSImp :: SBSMSImp(int channels, SBSMSQuality *quality, bool bSynthesize)
+      |                      ~~~~^~~~~~~~
+/home/ember/work/libsbsms/src/sbsms.cpp:70:7: note: shadowed declaration is here
+   70 |   int channels;
+      |       ^~~~~~~~
+/home/ember/work/libsbsms/src/subband.cpp: In member function ‘void _sbsms_::SubBand::adjust1()’:
+/home/ember/work/libsbsms/src/subband.cpp:747:29: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+  747 |     sms->adjust1(stretch,f0+nGrainsAdjusted1*df,f0+(nGrainsAdjusted1+1)*df);
+      |                             ^~~~~~~~~~~~~~~~
+/home/ember/work/libsbsms/src/subband.cpp:747:69: warning: conversion from ‘long int’ to ‘float’ may change value [-Wconversion]
+  747 |     sms->adjust1(stretch,f0+nGrainsAdjusted1*df,f0+(nGrainsAdjusted1+1)*df);
+      |                                                    ~~~~~~~~~~~~~~~~~^~~
+/home/ember/work/libsbsms/src/subband.cpp: In member function ‘long int _sbsms_::SubBand::write(float (*)[2], long int, float, float)’:
+/home/ember/work/libsbsms/src/subband.cpp:911:10: warning: declaration of ‘nGrainsRead’ shadows a member of ‘_sbsms_::SubBand’ [-Wshadow]
+  911 |     long nGrainsRead = 0;
+      |          ^~~~~~~~~~~
+/home/ember/work/libsbsms/src/subband.h:157:8: note: shadowed declaration is here
+  157 |   long nGrainsRead;
+      |        ^~~~~~~~~~~
+/home/ember/work/libsbsms/src/subband.cpp:912:25: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+  912 |     for(int k=grainsIn->readPos;k<grainsIn->writePos;k++) {
+      |               ~~~~~~~~~~^~~~~~~
+[100%] Linking CXX shared library libsbsms.so
+[100%] Built target sbsms

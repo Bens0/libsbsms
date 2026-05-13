@@ -815,7 +815,7 @@ public:
 template<int N>
 class fft_order {
 public:
-  fft_order<N>() {
+  fft_order() {
     for(int k=0;k<N;k++) {
       int kr = fft_order_<N>::iterate(k);
       order[kr] = k;

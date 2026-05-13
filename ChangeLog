@@ -1,3 +1,8 @@
+libsbsms version 2.4.0 (12 May 2026)
+Modernize cmake requirements
+Refactor code to throw zero warnings from stock GCC optimizations
+Work on fixing warnings using the "-Wall -Wextra -Wshadow -Wconversion" flags
+
 libsbsms version 2.2.0 (01 Feb 2021)
 First major release since migrating to GitHub.
 Includes multiple bug fixes and optimizations since version 2.0.2.

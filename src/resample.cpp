@@ -93,9 +93,9 @@ void updateSlide(Slide *slide, float *f, float *scale, int *maxDist, float *rati
     *scale = stretch;
     *maxDist = lrintf(resampleSincSamples);
   } else {
-    *f = resampleSincRes / stretch;
+    *f = static_cast<float>(resampleSincRes) / stretch;
     *scale = 1.0f;
-    *maxDist = lrintf(resampleSincSamples * stretch);
+    *maxDist = lrintf(static_cast<float>(resampleSincSamples) * stretch);
   }
   *ratio = stretch;
 }

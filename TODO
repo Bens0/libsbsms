@@ -1,2 +1,8 @@
 [x] implement wxsbsmsplayer - on sourceforge, not maintained
-[ ] v3.0
+[x] up CMake minimum requirement to 3.14 as baseline
+[x] set version of DLL and SO files to list the current package version
+[x] remove GCC compile warnings with c++20
+[ ] remove GCC shadow warnings with c++20
+[ ] remove GCC conversion warnings with c++20
+[ ] remove GCC extra warnings with c++20
+[ ] remove ALL GCC warnings using the "-Wall -Wextra -Wshadow -Wconversion" parameters with c++20
