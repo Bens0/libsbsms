@@ -11,7 +11,7 @@ Building
 =======
 ```
 git clone https://github.com/Bens0/libsbsms.git
-cmake
+cmake ..
 make
 ```
 
