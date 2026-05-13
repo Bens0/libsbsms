@@ -9,9 +9,11 @@ There is a simple command line program 'sbsms-convert` in ./example which perfor
 
 Building
 =======
-Clone the repo
+```
+git clone https://github.com/Bens0/libsbsms.git
 cmake
 make
+```
 
 Refactor
 =======
